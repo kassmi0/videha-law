@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { services } from '@/lib/law-data/services';
@@ -11,7 +12,7 @@ export default function ServicesPage() {
       <Header />
 
       <main className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Our Services
@@ -21,12 +22,22 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Card
                 key={service.id}
-                className="bg-card/80 border-border/60 hover:shadow-lg transition-shadow"
+                className="overflow-hidden rounded-xl border-border/60 bg-card/80 shadow-sm transition-shadow hover:shadow-lg"
               >
+                <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg sm:h-52 lg:h-56">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    quality={100}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
                 <CardHeader>
                   <CardTitle className="text-xl text-foreground">
                     {service.title}

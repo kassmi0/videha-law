@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -20,10 +21,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-primary-foreground">
-              Kasmita
+        <div className="flex h-20 items-center justify-between">
+          <div className="flex items-center min-w-0">
+            <Link href="/" className="flex items-center gap-4 min-w-0">
+              <div className="flex h-16 w-16 items-center justify-center rounded-md bg-primary">
+                <Image
+                  src="/images/logo-videha.png"
+                  alt="Videha Law and Associates logo"
+                  width={64}
+                  height={64}
+                  className="h-14 w-14 rounded-sm object-contain"
+                />
+              </div>
+              <div className="min-w-0 text-left">
+                <p className="truncate text-base font-bold leading-tight text-primary-foreground md:text-lg">
+                  Videha Law and Associates
+                </p>
+                <p className="hidden truncate text-xs text-primary-foreground/85 md:block">
+                  Premier Corporate Law Firm in Nepal.
+                </p>
+              </div>
             </Link>
           </div>
 
@@ -85,7 +102,11 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button asChild variant="default">
+            <Button
+              asChild
+              variant="secondary"
+              className="bg-white text-primary hover:bg-white/90"
+            >
               <a href="/#consultation">Book Consultation</a>
             </Button>
           </div>
@@ -140,7 +161,11 @@ export default function Header() {
             <Link href="/#consultation" className="text-white/90 hover:text-white transition-colors">
               Contact
             </Link>
-            <Button asChild variant="default" className="w-full">
+            <Button
+              asChild
+              variant="secondary"
+              className="w-full bg-white text-primary hover:bg-white/90"
+            >
               <a href="/#consultation">Book Consultation</a>
             </Button>
           </nav>

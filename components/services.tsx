@@ -1,12 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { services } from '@/lib/law-data/services';
 
 export default function Services() {
+  const visibleServices = services.slice(0, 6);
+
   return (
     <section id="services" className="py-20 bg-card">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
             Our Services
@@ -16,9 +19,19 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <Card key={service.title} className="hover:shadow-lg transition-shadow">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {visibleServices.map((service) => (
+            <Card key={service.title} className="overflow-hidden rounded-xl border-border/60 shadow-sm transition-shadow hover:shadow-lg">
+              <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg sm:h-48 lg:h-52">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  quality={100}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <CardHeader>
                 <CheckCircle className="w-8 h-8 text-primary mb-2" />
                 <CardTitle className="text-lg text-foreground">

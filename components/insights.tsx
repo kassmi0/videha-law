@@ -28,7 +28,7 @@ const articles = [
 export default function Insights() {
   return (
     <section id="insights" className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
             Insights & Publications
@@ -38,7 +38,7 @@ export default function Insights() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Card key={article.title} className="hover:shadow-lg transition-shadow flex flex-col">
               <CardHeader>

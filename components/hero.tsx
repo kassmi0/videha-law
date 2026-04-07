@@ -22,7 +22,7 @@ export default function Hero() {
             <a href="#consultation">Book Consultation</a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#contact">Get in Touch</a>
+            <a href="/services">Learn More</a>
           </Button>
         </div>
       </div>

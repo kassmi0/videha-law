@@ -1,6 +1,7 @@
 export type Service = {
   id: string;
   title: string;
+  image: string;
   shortDescription: string;
   fullDescription: string;
   keyPoints: string[];
@@ -11,6 +12,7 @@ export const services: Service[] = [
   {
     id: 'criminal-law',
     title: 'Criminal Law',
+    image: '/images/services/criminal-law.png',
     shortDescription:
       'Expert defense and representation in criminal matters with proven track record.',
     fullDescription:
@@ -27,6 +29,7 @@ export const services: Service[] = [
   {
     id: 'corporate-law',
     title: 'Corporate Law',
+    image: '/images/services/corporate-law.png',
     shortDescription:
       'Comprehensive legal solutions for businesses of all sizes and industries.',
     fullDescription:
@@ -43,6 +46,7 @@ export const services: Service[] = [
   {
     id: 'family-law',
     title: 'Family Law',
+    image: '/images/services/family-law.png',
     shortDescription:
       'Compassionate guidance through family legal matters and domestic relations.',
     fullDescription:
@@ -59,6 +63,7 @@ export const services: Service[] = [
   {
     id: 'property-law',
     title: 'Property Law',
+    image: '/images/services/property-law.png',
     shortDescription:
       'Protecting your real estate interests and property rights effectively.',
     fullDescription:
@@ -75,6 +80,7 @@ export const services: Service[] = [
   {
     id: 'immigration-law',
     title: 'Immigration Law',
+    image: '/images/services/immigration-law.png',
     shortDescription:
       'Navigate complex immigration processes with experienced legal support.',
     fullDescription:
@@ -91,6 +97,7 @@ export const services: Service[] = [
   {
     id: 'civil-litigation',
     title: 'Civil Litigation',
+    image: '/images/services/civil-litigation.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:

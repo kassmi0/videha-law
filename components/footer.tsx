@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { practiceAreas } from '@/lib/law-data/practice-areas';
 import { services } from '@/lib/law-data/services';
 
@@ -8,7 +9,23 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-bold text-primary-foreground mb-4">Kasmita</h3>
+            <div className="mb-4 flex items-center gap-4">
+              <div className="flex h-24 w-24 items-center justify-center rounded-md bg-primary">
+                <Image
+                  src="/images/logo-videha.png"
+                  alt="Videha Law and Associates logo"
+                  width={96}
+                  height={96}
+                  className="h-20 w-20 rounded-sm object-contain"
+                />
+              </div>
+              <div className="text-left">
+                <h3 className="text-lg font-bold text-primary-foreground">Videha Law and Associates</h3>
+                <p className="text-xs text-primary-foreground/85">
+                  Premier Corporate Law Firm in Nepal.
+                </p>
+              </div>
+            </div>
             <p className="text-primary-foreground/70 text-sm">
               Premier legal services for corporate, commercial, and intellectual property matters.
             </p>
@@ -76,7 +93,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-border border-opacity-30">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-primary-foreground/70">
-              © 2024 Kasmita Law and Associates. All rights reserved.
+              © 2024 Videha Law and Associates. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/70 mt-4 md:mt-0">
               This website is for informational purposes only and does not constitute legal advice.
