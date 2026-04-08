@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { practiceAreas } from '@/lib/law-data/practice-areas';
 import { services } from '@/lib/law-data/services';
 
 export default function Footer() {
@@ -8,6 +7,8 @@ export default function Footer() {
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
+          
+          {/* Logo + About */}
           <div>
             <div className="mb-4 flex items-center gap-4">
               <div className="flex h-24 w-24 items-center justify-center rounded-md bg-primary">
@@ -20,7 +21,9 @@ export default function Footer() {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-lg font-bold text-primary-foreground">Videha Law and Associates</h3>
+                <h3 className="text-lg font-bold text-primary-foreground">
+                  Videha Law and Associates
+                </h3>
                 <p className="text-xs text-primary-foreground/85">
                   Premier Corporate Law Firm in Nepal.
                 </p>
@@ -31,22 +34,39 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Menu */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Practice Areas</h4>
+            <h4 className="font-semibold text-primary-foreground mb-4">Menu</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              {practiceAreas.map((area) => (
-                <li key={area.id}>
-                  <Link
-                    href={`/practice-areas/${area.id}`}
-                    className="hover:text-primary-foreground transition-colors"
-                  >
-                    {area.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/#about" className="hover:text-primary-foreground transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/#practice-areas" className="hover:text-primary-foreground transition-colors">
+                  Practice Areas
+                </Link>
+              </li>
+              <li>
+                <Link href="/#services" className="hover:text-primary-foreground transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/#insights" className="hover:text-primary-foreground transition-colors">
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link href="/#consultation" className="hover:text-primary-foreground transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
+          {/* Services (kept dynamic if you still want it) */}
           <div>
             <h4 className="font-semibold text-primary-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
@@ -63,6 +83,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Quick Links (optional — you can remove if redundant) */}
           <div>
             <h4 className="font-semibold text-primary-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
@@ -88,8 +109,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
         </div>
 
+        {/* Bottom */}
         <div className="pt-8 border-t border-border border-opacity-30">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-primary-foreground/70">
