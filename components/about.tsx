@@ -19,7 +19,7 @@ export default function About() {
                   About the Firm
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                  Kasmita Law and Associates
+                Videha Law and Associates
                 </h2>
                 <div className="w-16 h-1 bg-accent mb-6" />
                 <p className="text-white/90 text-lg">
@@ -33,7 +33,7 @@ export default function About() {
           <div className="bg-background/50 p-8 md:p-12 flex flex-col justify-between rounded-r-lg">
             <div>
               <p className="text-foreground text-base leading-relaxed mb-6">
-                Kasmita Law and Associates stands as a premier corporate law firm in Nepal, built on a foundation of deep industry insight, technical expertise, and an unwavering commitment to client success. We are dedicated to delivering sophisticated, strategic, and practical legal solutions to domestic and international clients navigating the complexities of the Nepalese market.
+              Videha Law and Associates stands as a premier corporate law firm in Nepal, built on a foundation of deep industry insight, technical expertise, and an unwavering commitment to client success. We are dedicated to delivering sophisticated, strategic, and practical legal solutions to domestic and international clients navigating the complexities of the Nepalese market.
               </p>
 
               <p className="text-foreground text-base leading-relaxed mb-6">
