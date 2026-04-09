@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { practiceAreas } from '@/lib/law-data/practice-areas';
 import { Card, CardContent } from '@/components/ui/card';
-
 import { BadgeCheck } from 'lucide-react';
+
 export default async function PracticeAreaDetailPage({
   params,
 }: {
@@ -42,9 +42,28 @@ export default async function PracticeAreaDetailPage({
             <div className="lg:col-span-2">
               <Card className="bg-card/80 border-border/60">
                 <CardContent className="p-6">
-                  <p className="text-foreground/80 whitespace-pre-line leading-relaxed">
-                    {area.fullDescription}
-                  </p>
+                  <div className="text-foreground/80 leading-relaxed space-y-2">
+                    {area.fullDescription.split('\n').map((line, i) => {
+                      const trimmed = line.trim();
+
+                      if (!trimmed) return <br key={i} />;
+
+                      const isHeading =
+                        trimmed === 'Overview' ||
+                        area.keyPoints.some((point) => trimmed === point);
+
+                      return isHeading ? (
+                        <p
+                          key={i}
+                          className="font-bold text-foreground text-lg mt-6"
+                        >
+                          {trimmed}
+                        </p>
+                      ) : (
+                        <p key={i}>{line}</p>
+                      );
+                    })}
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -75,4 +94,3 @@ export default async function PracticeAreaDetailPage({
     </div>
   );
 }
-
