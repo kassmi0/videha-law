@@ -10,8 +10,8 @@ export type Service = {
 // Featured subset to match what the navbar shows initially.
 export const services: Service[] = [
   {
-    id: 'criminal-law',
-    title: 'Criminal Law',
+    id: 'corporate-compliance',
+    title: 'Corporate compliance services',
     image: '/images/services/criminal-law.png',
     shortDescription:
       'Expert defense and representation in criminal matters with proven track record.',
@@ -27,8 +27,8 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'corporate-law',
-    title: 'Corporate Law',
+    id: 'intellectual-property-investigation',
+    title: 'Intellectual Property(IP) Investigation service in Nepal',
     image: '/images/services/corporate-law.png',
     shortDescription:
       'Comprehensive legal solutions for businesses of all sizes and industries.',
@@ -44,8 +44,8 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'family-law',
-    title: 'Family Law',
+    id: 'trademark-filing-registration-opposition',
+    title: 'Trademark Filing, Registration and Opposition in Nepal',
     image: '/images/services/family-law.png',
     shortDescription:
       'Compassionate guidance through family legal matters and domestic relations.',
@@ -61,8 +61,8 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'property-law',
-    title: 'Property Law',
+    id: 'foreign-direct-investment-business-incorporation',
+    title: 'Foreign Direct Investment and Business Incorporation in Nepal',
     image: '/images/services/property-law.png',
     shortDescription:
       'Protecting your real estate interests and property rights effectively.',
@@ -78,8 +78,8 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'immigration-law',
-    title: 'Immigration Law',
+    id: 'ingo-ngo-compliance',
+    title: 'INGO and NGO Compliance',
     image: '/images/services/immigration-law.png',
     shortDescription:
       'Navigate complex immigration processes with experienced legal support.',
@@ -95,8 +95,162 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 'civil-litigation',
-    title: 'Civil Litigation',
+    id: 'legal-advisor',
+    title: 'Legal Advisor',
+    image: '/images/services/immigration-law.png',
+    shortDescription:
+      'Navigate complex immigration processes with experienced legal support.',
+    fullDescription:
+      'Immigration law is complex and ever-changing. Our immigration attorneys stay current with regulations to help individuals and families navigate the immigration process successfully.',
+    keyPoints: [
+      'Visa applications and renewals',
+      'Green card and citizenship',
+      'Family-based immigration',
+      'Employment-based immigration',
+      'Deportation defense',
+      'Asylum applications',
+    ],
+  },
+  {
+    id: 'construction-conflict-resolution',
+    title: 'Construction Conflict Resolution',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'branch-registration-compliance',
+    title: 'Branch Registration and Compliance',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'registration-of-aircraft',
+    title: 'Registration of Aircraft',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+
+  {
+    id: 'contract-drafting',
+    title: 'Contract Drafting',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'hydropower-project-registration',
+    title: 'Hydropower Project Registration',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'legal-reform',
+    title: 'Legal Reform',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'company-registration',
+    title: 'Company Registration',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'corporate-licensing-services',
+    title: 'Corporate Licensing Services',
+    image: '/images/services/civil-litigation.png',
+    shortDescription:
+      'Aggressive representation in civil disputes and commercial litigation.',
+    fullDescription:
+      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+    keyPoints: [
+      'Contract disputes',
+      'Personal injury claims',
+      'Business litigation',
+      'Employment disputes',
+      'Class action lawsuits',
+      'Appellate advocacy',
+    ],
+  },
+  {
+    id: 'legal-consulting',
+    title: 'Legal Consulting',
     image: '/images/services/civil-litigation.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
