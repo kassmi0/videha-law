@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Footer() {
   return (
@@ -41,54 +43,63 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Connect Via</h4>
 
             {/* ICON WRAP FIXED */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-
-              {/* WhatsApp */}
-              <a className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white hover:bg-green-500 transition-all"
-                 href="https://wa.me/9779849093540"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                  <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.49 0 .16 5.33.16 11.89c0 2.09.55 4.13 1.59 5.94L0 24l6.31-1.65a11.9 11.9 0 005.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.17-3.47-8.43z" />
-                </svg>
-              </a>
-
-              {/* Facebook */}
-              <a className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white hover:bg-blue-600 transition-all"
-                 href="https://www.facebook.com/profile.php?id=61570958068623"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                  <path d="M22 12a10 10 0 10-11.5 9.88v-6.99H8v-2.89h2.5V9.41c0-2.47 1.47-3.84 3.73-3.84 1.08 0 2.21.19 2.21.19v2.43h-1.25c-1.23 0-1.62.76-1.62 1.54v1.85H16l-.4 2.89h-2.22v6.99A10 10 0 0022 12z" />
-                </svg>
-              </a>
-
-              {/* LinkedIn */}
-              <a className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white hover:bg-blue-700 transition-all"
-                 href="https://linkedin.com"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                  <path d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31z" />
-                </svg>
-              </a>
-
-              {/* Instagram */}
-              <a className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white hover:bg-pink-500 transition-all"
-                 href="https://www.instagram.com/videha.law/"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                  <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5z" />
-                </svg>
-              </a>
-
-              {/* Email */}
-              <a className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white hover:bg-red-500 transition-all"
-                 href="mailto:infovidehalaw@gmail.com">
-                <Mail className="h-5 w-5" />
-              </a>
-
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+              {[
+{
+  label: 'WhatsApp',
+  href: 'https://wa.me/9747201706',
+  icon: <FaWhatsapp className="h-5 w-5" aria-hidden="true" />,
+  hover: 'hover:bg-green-500/20 hover:text-green-100',
+  external: true,
+},
+                {
+                  label: 'Facebook',
+                  href: 'https://www.facebook.com/profile.php?id=61570958068623',
+                  icon: <FaFacebookF className="h-5 w-5" aria-hidden="true" />,
+                  hover: 'hover:bg-blue-500/20 hover:text-blue-100',
+                  external: true,
+                },
+                {
+                  label: 'LinkedIn',
+                  href: 'https://linkedin.com',
+                  icon: <FaLinkedinIn className="h-5 w-5" aria-hidden="true" />,
+                  hover: 'hover:bg-sky-500/20 hover:text-sky-100',
+                  external: true,
+                },
+                {
+                  label: 'Instagram',
+                  href: 'https://www.instagram.com/videha.law/',
+                  icon: <FaInstagram className="h-5 w-5" aria-hidden="true" />,
+                  hover: 'hover:bg-pink-500/20 hover:text-pink-100',
+                  external: true,
+                },
+                {
+                  label: 'Email',
+                  href: 'mailto:infovidehalaw@gmail.com',
+                  icon: <HiOutlineMail className="h-5 w-5" aria-hidden="true" />,
+                  hover: 'hover:bg-red-500/20 hover:text-red-100',
+                  external: false,
+                },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  title={item.label}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
+                  className={[
+                    'inline-flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full',
+                    'bg-white/10 text-white ring-1 ring-white/15',
+                    'transition-all duration-200',
+                    'hover:bg-white/20 hover:ring-white/30',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-primary',
+                    item.hover,
+                  ].join(' ')}
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
 
             <h4 className="font-semibold mb-2">Office Hours</h4>

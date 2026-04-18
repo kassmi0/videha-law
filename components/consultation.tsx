@@ -15,6 +15,11 @@ export default function Consultation() {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,11 +29,40 @@ export default function Consultation() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    alert('Thank you for your inquiry. We will contact you shortly.');
+    if (isSubmitting) return;
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      setIsSubmitting(true);
+      const res = await fetch('/api/book-consultation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as {
+          error?: string;
+          hint?: string;
+        } | null;
+        const base = data?.error || 'Failed to submit. Please try again.';
+        const hint = data?.hint ? `\n\n${data.hint}` : '';
+        throw new Error(`${base}${hint}`);
+      }
+
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you for your inquiry. We will contact you shortly.',
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      setSubmitStatus({ type: 'error', message });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -127,9 +161,20 @@ export default function Consultation() {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                Schedule Consultation
+              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
               </Button>
+              {submitStatus.type ? (
+                <p
+                  className={[
+                    'text-sm',
+                    submitStatus.type === 'success' ? 'text-green-600' : 'text-red-600',
+                  ].join(' ')}
+                  role="status"
+                >
+                  {submitStatus.message}
+                </p>
+              ) : null}
             </form>
           </div>
 
