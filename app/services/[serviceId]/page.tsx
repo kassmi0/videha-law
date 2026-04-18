@@ -1,78 +1,69 @@
-import Header from '@/components/header';
-import Footer from '@/components/footer';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { services } from '@/lib/law-data/services';
-import { Card, CardContent } from '@/components/ui/card';
-import { BadgeCheck } from 'lucide-react';
 
-export default async function ServiceDetailPage({
-  params,
-}: {
-  params: Promise<{ serviceId: string }>;
-}) {
-  const { serviceId } = await params;
-  const service = services.find((s) => s.id === serviceId);
-
-  if (!service) notFound();
+export default function Services() {
+  const visibleServices = services.slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <section id="services" className="py-20 bg-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <main className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <Link
-              href="/services"
-              className="text-primary hover:underline inline-flex items-center"
-            >
-              ← Back to Services
-            </Link>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            {service.title}
-          </h1>
-          <p className="text-foreground/70 text-lg max-w-2xl mb-10">
-            {service.shortDescription}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-primary mb-4">
+            Our Services
+          </h2>
+          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+            Comprehensive legal solutions tailored to your unique business and personal needs
           </p>
-
-          <div className="grid lg:grid-cols-3 gap-8 items-start">
-            <div className="lg:col-span-2">
-              <Card className="bg-card/80 border-border/60">
-                <CardContent className="p-6">
-                  <p className="text-foreground/80 whitespace-pre-line leading-relaxed">
-                    {service.fullDescription}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Key Highlights
-              </h2>
-              <div className="space-y-3">
-                {service.keyPoints.map((point) => (
-                  <div
-                    key={point}
-                    className="flex items-start gap-3 bg-card/70 border border-border/50 rounded-lg p-4"
-                  >
-                    <BadgeCheck className="h-5 w-5 text-primary mt-0.5" />
-                    <p className="text-foreground/80 text-sm leading-relaxed">
-                      {point}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
 
-      <Footer />
-    </div>
+        {/* FIXED ALIGNMENT GRID */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+
+          {visibleServices.map((service) => (
+            <Card
+              key={service.title}
+              className="flex flex-col h-full overflow-hidden rounded-xl border-border/60 shadow-sm hover:shadow-xl transition-shadow"
+            >
+              <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  quality={100}
+                  className="object-cover"
+                />
+              </div>
+
+              <CardHeader>
+                <CheckCircle className="w-8 h-8 text-primary mb-2" />
+                <CardTitle className="text-lg text-foreground">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+
+              {/* FIX: equal spacing alignment */}
+              <CardContent className="flex flex-col flex-1">
+                <p className="text-foreground/70">
+                  {service.shortDescription}
+                </p>
+              </CardContent>
+
+            </Card>
+          ))}
+
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="/services" className="text-primary font-semibold hover:underline">
+            View All Services
+          </Link>
+        </div>
+
+      </div>
+    </section>
   );
 }
-

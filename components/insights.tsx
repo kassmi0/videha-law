@@ -4,22 +4,22 @@ import { Calendar, User } from 'lucide-react';
 const articles = [
   {
     title: 'Understanding Foreign Direct Investment Regulations',
-    author: 'Sarah Johnson',
-    date: 'March 15, 2024',
+    author: 'Videha Law and Associates',
+    date: 'March 15, 2025',
     excerpt: 'A comprehensive guide to navigating FDI regulations and compliance requirements in today\'s global market.',
     category: 'Investment',
   },
   {
     title: 'Corporate Governance Best Practices',
-    author: 'Michael Chen',
-    date: 'March 10, 2024',
+    author: 'Videha Law and Associates',
+    date: 'April 10, 2025',
     excerpt: 'Essential governance practices to ensure compliance, transparency, and long-term organizational success.',
     category: 'Governance',
   },
   {
     title: 'Intellectual Property Protection Strategies',
-    author: 'Emily Rodriguez',
-    date: 'March 5, 2024',
+    author: 'Videha Law and Associates',
+    date: 'january 5, 2024',
     excerpt: 'Effective strategies for protecting your intellectual property in an increasingly digital world.',
     category: 'IP Law',
   },

@@ -90,7 +90,7 @@ export default function Consultation() {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+977"
                   className="w-full"
                   required
                 />
@@ -151,8 +151,8 @@ export default function Consultation() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80">info@kasmita.com</p>
-                <p className="text-foreground/80">legal@kasmita.com</p>
+                <p className="text-foreground/80">infovidehalaw@gmail.com</p>
+                
               </CardContent>
             </Card>
 
@@ -164,8 +164,8 @@ export default function Consultation() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80">+1 (555) 123-4567</p>
-                <p className="text-foreground/80">+1 (555) 987-6543</p>
+                <p className="text-foreground/80">+977 9747201706</p>
+                
               </CardContent>
             </Card>
 
@@ -177,9 +177,9 @@ export default function Consultation() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80">123 Legal Street</p>
-                <p className="text-foreground/80">Corporate Plaza, Suite 500</p>
-                <p className="text-foreground/80">City, State 12345</p>
+                <p className="text-foreground/80">  New-Baneshwor, Kathmandu 44600, Nepal</p>
+                {/* <p className="text-foreground/80">Corporate Plaza, Suite 500</p>
+                <p className="text-foreground/80">City, State 12345</p> */}
               </CardContent>
             </Card>
 
@@ -192,8 +192,8 @@ export default function Consultation() {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground/80">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-foreground/80">Saturday: 10:00 AM - 2:00 PM</p>
-                <p className="text-foreground/80">Sunday: Closed</p>
+                <p className="text-foreground/80">Saturday and sunday : closed</p>
+               
               </CardContent>
             </Card>
           </div>

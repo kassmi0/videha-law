@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Kasmita | Expert Legal Services',
-  description: 'Kasmita Law and Associates - Trusted legal expertise for corporate, commercial, and intellectual property matters.',
+  title: 'Videha Law and Associates | Expert Legal Services',
+  description: 'Videha Law and Associates - Trusted legal expertise for corporate, commercial, and intellectual property matters.',
   generator: 'v0.app',
   icons: {
     icon: [

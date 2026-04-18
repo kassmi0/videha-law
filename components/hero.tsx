@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const heroImages = [
-  'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80', // courtroom
-  'https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=1600&q=80', // law books
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80', // handshake
-  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80', // office
+  '/images/hero-images/courtroom.png',
+  '/images/hero-images/handshake.png',
+  '/images/hero-images/law-books.png',
+  '/images/hero-images/office.png'
 ];
 
 export default function Hero() {
@@ -46,10 +46,14 @@ export default function Hero() {
           Where Integrity Meets Impact
         </h1>
 
-        <p className="text-xl text-white/85 mb-8 max-w-2xl mx-auto drop-shadow">
-          Premier legal services for corporate, commercial, and intellectual property matters.
-          Your trusted partner in navigating complex legal challenges.
-        </p>
+        <p className="text-lg md:text-xl text-white/85 mb-8 max-w-3xl md:max-w-5xl mx-auto drop-shadow text-center">
+  <span className="block md:whitespace-nowrap">
+    Premier legal services for corporate, commercial, and intellectual property matters.
+  </span>
+  <span className="block md:whitespace-nowrap mt-2">
+    Your trusted partner in navigating complex legal challenges.
+  </span>
+</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">

@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/law-data/services';
@@ -10,6 +9,8 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
             Our Services
@@ -19,40 +20,45 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {/* Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           {visibleServices.map((service) => (
-            <Card key={service.title} className="overflow-hidden rounded-xl border-border/60 shadow-sm transition-shadow hover:shadow-lg">
-              <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg sm:h-48 lg:h-52">
+            <Card
+              key={service.title}
+              className="flex flex-col overflow-hidden rounded-xl border-border/60 shadow-sm hover:shadow-xl transition-shadow"
+            >
+              {/* Image */}
+              <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   quality={100}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
-              <CardHeader>
-                <CheckCircle className="w-8 h-8 text-primary mb-2" />
-                <CardTitle className="text-lg text-foreground">
+
+              {/* Title */}
+              <CardHeader className="pb-2 pt-4 px-4">
+                <CardTitle className="text-lg text-foreground leading-snug min-h-[3rem] flex items-start">
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70">{service.shortDescription}</p>
-                <div className="mt-4">
-                  <Link
-                    href={`/services/${service.id}`}
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-                  >
-                    Learn More <span aria-hidden>&gt;</span>
-                  </Link>
-                </div>
+
+              {/* Description */}
+              <CardContent className="px-4 pb-4 pt-0 flex-1">
+                <p className="text-foreground/70 text-sm leading-relaxed line-clamp-3">
+                  {service.shortDescription}
+                </p>
               </CardContent>
+
             </Card>
           ))}
+
         </div>
 
+        {/* View All */}
         <div className="text-center mt-12">
           <Link
             href="/services"
@@ -61,6 +67,7 @@ export default function Services() {
             View All Services
           </Link>
         </div>
+
       </div>
     </section>
   );

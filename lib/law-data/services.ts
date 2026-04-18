@@ -12,7 +12,7 @@ export const services: Service[] = [
   {
     id: 'corporate-compliance',
     title: 'Corporate compliance services',
-    image: '/images/services/criminal-law.png',
+    image: '/images/services/Corporate compliance services.png',
     shortDescription:
       'Expert defense and representation in criminal matters with proven track record.',
     fullDescription:
@@ -29,7 +29,7 @@ export const services: Service[] = [
   {
     id: 'intellectual-property-investigation',
     title: 'Intellectual Property(IP) Investigation service in Nepal',
-    image: '/images/services/corporate-law.png',
+    image: '/images/services/Intellectual Property(IP) Investigation service in Nepal.png',
     shortDescription:
       'Comprehensive legal solutions for businesses of all sizes and industries.',
     fullDescription:
@@ -46,7 +46,7 @@ export const services: Service[] = [
   {
     id: 'trademark-filing-registration-opposition',
     title: 'Trademark Filing, Registration and Opposition in Nepal',
-    image: '/images/services/family-law.png',
+    image: '/images/services/Trademark Filing, Registration and Opposition in Nepal.png',
     shortDescription:
       'Compassionate guidance through family legal matters and domestic relations.',
     fullDescription:
@@ -63,7 +63,7 @@ export const services: Service[] = [
   {
     id: 'foreign-direct-investment-business-incorporation',
     title: 'Foreign Direct Investment and Business Incorporation in Nepal',
-    image: '/images/services/property-law.png',
+    image: '/images/services/Foreign Direct Investment and Business Incorporation in Nepal.png',
     shortDescription:
       'Protecting your real estate interests and property rights effectively.',
     fullDescription:
@@ -80,7 +80,7 @@ export const services: Service[] = [
   {
     id: 'ingo-ngo-compliance',
     title: 'INGO and NGO Compliance',
-    image: '/images/services/immigration-law.png',
+    image: '/images/services/NGO INGO Compliance in Nepal_ Essential.png',
     shortDescription:
       'Navigate complex immigration processes with experienced legal support.',
     fullDescription:
@@ -97,7 +97,7 @@ export const services: Service[] = [
   {
     id: 'legal-advisor',
     title: 'Legal Advisor',
-    image: '/images/services/immigration-law.png',
+    image: '/images/services/Legal Advisor.png',
     shortDescription:
       'Navigate complex immigration processes with experienced legal support.',
     fullDescription:
@@ -114,7 +114,7 @@ export const services: Service[] = [
   {
     id: 'construction-conflict-resolution',
     title: 'Construction Conflict Resolution',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Construction Conflict Resolution.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -131,7 +131,7 @@ export const services: Service[] = [
   {
     id: 'branch-registration-compliance',
     title: 'Branch Registration and Compliance',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Branch Registration and Compliance.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -148,7 +148,7 @@ export const services: Service[] = [
   {
     id: 'registration-of-aircraft',
     title: 'Registration of Aircraft',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Aircraft.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -166,7 +166,7 @@ export const services: Service[] = [
   {
     id: 'contract-drafting',
     title: 'Contract Drafting',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Contract Drafting.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -183,7 +183,7 @@ export const services: Service[] = [
   {
     id: 'hydropower-project-registration',
     title: 'Hydropower Project Registration',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Hydropower Project Registration.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -200,7 +200,7 @@ export const services: Service[] = [
   {
     id: 'legal-reform',
     title: 'Legal Reform',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Legal Reform.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -217,7 +217,7 @@ export const services: Service[] = [
   {
     id: 'company-registration',
     title: 'Company Registration',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/company registration.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -234,7 +234,7 @@ export const services: Service[] = [
   {
     id: 'corporate-licensing-services',
     title: 'Corporate Licensing Services',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Corporate Licensing Services.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
@@ -251,7 +251,7 @@ export const services: Service[] = [
   {
     id: 'legal-consulting',
     title: 'Legal Consulting',
-    image: '/images/services/civil-litigation.png',
+    image: '/images/services/Legal Consulting.png',
     shortDescription:
       'Aggressive representation in civil disputes and commercial litigation.',
     fullDescription:
