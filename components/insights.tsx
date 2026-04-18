@@ -19,7 +19,7 @@ const articles = [
   {
     title: 'Intellectual Property Protection Strategies',
     author: 'Videha Law and Associates',
-    date: 'january 5, 2024',
+    date: 'january 5, 2026',
     excerpt: 'Effective strategies for protecting your intellectual property in an increasingly digital world.',
     category: 'IP Law',
   },
