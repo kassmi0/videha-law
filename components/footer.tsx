@@ -61,7 +61,7 @@ export default function Footer() {
                 },
                 {
                   label: 'LinkedIn',
-                  href: 'https://linkedin.com',
+                  href: 'https://www.linkedin.com/in/videhalaw/',
                   icon: <FaLinkedinIn className="h-5 w-5" aria-hidden="true" />,
                   hover: 'hover:bg-sky-500/20 hover:text-sky-100',
                   external: true,
