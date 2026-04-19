@@ -36,20 +36,26 @@ export default function Consultation() {
 
     try {
       setIsSubmitting(true);
-      const res = await fetch('/api/book-consultation', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
 
       if (!res.ok) {
         const data = (await res.json().catch(() => null)) as {
           error?: string;
           hint?: string;
+          details?: string;
         } | null;
         const base = data?.error || 'Failed to submit. Please try again.';
         const hint = data?.hint ? `\n\n${data.hint}` : '';
-        throw new Error(`${base}${hint}`);
+        const details = data?.details ? `\n\nDetails: ${data.details}` : '';
+        throw new Error(`${base}${hint}${details}`);
       }
 
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });

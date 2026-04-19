@@ -1,82 +1,114 @@
 import nodemailer from 'nodemailer';
-import { z } from 'zod';
+import { NextResponse } from 'next/server';
 
-export const ConsultationSchema = z.object({
-  name: z.string().trim().min(1).max(200),
-  email: z.string().trim().email().max(320),
-  phone: z.string().trim().min(3).max(40),
-  subject: z.string().trim().min(1).max(200),
-  message: z.string().trim().min(1).max(5000),
-});
+function getEmailEnv() {
+  const user = process.env.EMAIL_USER;
+  const passRaw = process.env.EMAIL_PASS;
 
-export type ConsultationPayload = z.infer<typeof ConsultationSchema>;
+  // Remove spaces from app password
+  const pass =
+    typeof passRaw === 'string' ? passRaw.replace(/\s+/g, '') : passRaw;
 
-const TO_ADDRESS = 'infovidehalaw@gmail.com';
-
-/**
- * Reads Gmail SMTP credentials from the environment.
- * Trims whitespace — a common cause of "not configured" when values are copied with spaces.
- */
-export function readSmtpCredentials(): {
-  user: string;
-  pass: string;
-  missing: ('EMAIL_USER' | 'EMAIL_PASS')[];
-} {
-  const user = (process.env.EMAIL_USER ?? '').trim();
-  const pass = (process.env.EMAIL_PASS ?? '').trim();
-  const missing: ('EMAIL_USER' | 'EMAIL_PASS')[] = [];
-  if (!user) missing.push('EMAIL_USER');
-  if (!pass) missing.push('EMAIL_PASS');
-  return { user, pass, missing };
-}
-
-/** Safe logs for debugging env loading (never logs the password). */
-export function logSmtpEnvDebug(routeLabel: string): void {
-  const { user, pass, missing } = readSmtpCredentials();
-  const isDev = process.env.NODE_ENV === 'development';
-
-  if (isDev) {
-    console.log(`[${routeLabel}] EMAIL_USER loaded:`, user ? user : '(empty — set EMAIL_USER in .env.local)');
-    console.log(`[${routeLabel}] EMAIL_PASS present:`, pass ? `yes (length: ${pass.length})` : 'no');
-  } else {
-    console.log(`[${routeLabel}] EMAIL_USER set:`, Boolean(user));
-    console.log(`[${routeLabel}] EMAIL_PASS set:`, Boolean(pass));
+  if (!user || !pass) {
+    return {
+      ok: false,
+      missing: [!user ? 'EMAIL_USER' : null, !pass ? 'EMAIL_PASS' : null].filter(Boolean),
+    };
   }
 
-  if (missing.length) {
-    console.warn(
-      `[${routeLabel}] Missing env: ${missing.join(', ')}. Add them to .env.local at the project root (next to package.json) and restart the dev server.`,
+  return { ok: true, user, pass };
+}
+
+export async function POST(req: Request) {
+  try {
+    const env = getEmailEnv();
+
+    if (!env.ok) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Email is not configured on the server.',
+          missing: env.missing,
+        },
+        { status: 500 }
+      );
+    }
+
+    const body = await req.json().catch(() => null);
+
+    const name =
+      typeof body?.name === 'string' ? body.name.trim() : '';
+    const email =
+      typeof body?.email === 'string' ? body.email.trim() : '';
+    const phone =
+      typeof body?.phone === 'string' ? body.phone.trim() : '';
+    const subject =
+      typeof body?.subject === 'string' ? body.subject.trim() : '';
+    const message =
+      typeof body?.message === 'string' ? body.message.trim() : '';
+
+    // Validation
+    if (!name || !email || !phone || !subject || !message) {
+      return NextResponse.json(
+        { success: false, error: 'Please fill out all fields.' },
+        { status: 400 }
+      );
+    }
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: env.user,
+        pass: env.pass,
+      },
+    });
+
+    // Debug: verify SMTP connection
+    await transporter.verify();
+    console.log('✅ SMTP READY');
+
+    // Sanitize function
+    const safe = (s: string) =>
+      String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+
+    // HTML email
+    const html = `
+      <div style="font-family: Arial, sans-serif;">
+        <h2>New Consultation Booking</h2>
+        <p><strong>Name:</strong> ${safe(name)}</p>
+        <p><strong>Email:</strong> ${safe(email)}</p>
+        <p><strong>Phone:</strong> ${safe(phone)}</p>
+        <p><strong>Subject:</strong> ${safe(subject)}</p>
+        <p><strong>Message:</strong></p>
+        <p style="white-space: pre-wrap;">${safe(message)}</p>
+      </div>
+    `;
+
+    await transporter.sendMail({
+      from: `Videha Law <${env.user}>`,
+      to: "infovidehalaw@gmail.com", // or change to your firm email
+      replyTo: email,
+      subject: `New Consultation: ${subject}`,
+      html,
+    });
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Unknown error';
+    console.error('[api/contact] sendMail failed:', message);
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'Failed to send email.',
+        details: message,
+      },
+      { status: 500 }
     );
   }
-}
-
-export async function sendConsultationMail(payload: ConsultationPayload): Promise<void> {
-  const { user, pass, missing } = readSmtpCredentials();
-  if (missing.length) {
-    const err = new Error('MISSING_EMAIL_ENV');
-    (err as Error & { missing: string[] }).missing = missing;
-    throw err;
-  }
-
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: { user, pass },
-  });
-
-  const { name, email, phone, subject, message } = payload;
-
-  await transporter.sendMail({
-    from: user,
-    to: TO_ADDRESS,
-    replyTo: email,
-    subject: `New Consultation Request - ${subject}`,
-    text:
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone}\n` +
-      `Subject: ${subject}\n` +
-      `Message: ${message}\n`,
-  });
 }

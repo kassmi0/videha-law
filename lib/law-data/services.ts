@@ -14,7 +14,7 @@ export const services: Service[] = [
     title: 'Corporate compliance services',
     image: '/images/services/Corporate compliance services.png',
     shortDescription:
-      'Expert defense and representation in criminal matters with proven track record.',
+      'Corporate compliance services ensure that a company follows all applicable laws, regulations, and internal policies. These services include maintaining statutory records, filing returns, meeting regulatory requirements, drafting contracts, and advising on corporate governance. Their main purpose is to reduce legal risk, avoid penalties, and ensure smooth and lawful business operations.',
     fullDescription:
       'Our criminal law practice provides comprehensive defense services for clients facing criminal charges. With decades of combined experience, our attorneys have successfully defended clients in cases ranging from misdemeanors to serious felonies.',
     keyPoints: [
@@ -31,7 +31,7 @@ export const services: Service[] = [
     title: 'Intellectual Property(IP) Investigation service in Nepal',
     image: '/images/services/Intellectual Property(IP) Investigation service in Nepal.png',
     shortDescription:
-      'Comprehensive legal solutions for businesses of all sizes and industries.',
+      'IP investigation services in Nepal focus on detecting and proving infringement of trademarks, copyrights, and designs. They include market monitoring, identifying infringers, collecting evidence, and supporting legal enforcement under laws like the Patent, Design and Trademark Act and Copyright Act.',
     fullDescription:
       'We provide strategic legal counsel to businesses, from startups to established corporations. Our corporate law services cover entity formation, contracts, mergers and acquisitions, compliance, and corporate governance.',
     keyPoints: [
@@ -48,7 +48,7 @@ export const services: Service[] = [
     title: 'Trademark Filing, Registration and Opposition in Nepal',
     image: '/images/services/Trademark Filing, Registration and Opposition in Nepal.png',
     shortDescription:
-      'Compassionate guidance through family legal matters and domestic relations.',
+      'Trademark in Nepal involves filing an application, examination and publication, a period for opposition by third parties, and final registration if no valid objection is raised.',
     fullDescription:
       'Family matters require sensitivity and expertise. Our family law attorneys provide compassionate representation in divorce, custody disputes, adoption, and other domestic relations matters.',
     keyPoints: [
@@ -65,7 +65,7 @@ export const services: Service[] = [
     title: 'Foreign Direct Investment and Business Incorporation in Nepal',
     image: '/images/services/Foreign Direct Investment and Business Incorporation in Nepal.png',
     shortDescription:
-      'Protecting your real estate interests and property rights effectively.',
+      'Foreign Direct Investment (FDI) and business incorporation in Nepal involve obtaining approval (typically from the Department of Industry or Investment Board), registering the company with the Office of Company Registrar, and complying with sectoral, tax, and regulatory requirements to legally operate.',
     fullDescription:
       'Our property law practice handles all aspects of real estate transactions and disputes. We represent buyers, sellers, developers, and property owners in residential and commercial matters.',
     keyPoints: [
@@ -82,7 +82,7 @@ export const services: Service[] = [
     title: 'INGO and NGO Compliance',
     image: '/images/services/NGO INGO Compliance in Nepal_ Essential.png',
     shortDescription:
-      'Navigate complex immigration processes with experienced legal support.',
+      'NGO/INGO compliance in Nepal involves registration, renewal, and approval from relevant authorities (District Administration Office and Social Welfare Council for INGOs), submission of annual reports, audit reports, and ensuring activities align with approved objectives and government regulations.',
     fullDescription:
       'Immigration law is complex and ever-changing. Our immigration attorneys stay current with regulations to help individuals and families navigate the immigration process successfully.',
     keyPoints: [
@@ -99,7 +99,7 @@ export const services: Service[] = [
     title: 'Legal Advisor',
     image: '/images/services/Legal Advisor.png',
     shortDescription:
-      'Navigate complex immigration processes with experienced legal support.',
+      'We provide legal guidance to ensure compliance with Nepalese laws, assist in drafting and reviewing documents, and help clients manage legal risks for smooth and lawful operations.',
     fullDescription:
       'Immigration law is complex and ever-changing. Our immigration attorneys stay current with regulations to help individuals and families navigate the immigration process successfully.',
     keyPoints: [
@@ -116,7 +116,7 @@ export const services: Service[] = [
     title: 'Construction Conflict Resolution',
     image: '/images/services/Construction Conflict Resolution.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We assist in resolving disputes in construction projects through negotiation, mediation, arbitration, and legal support. Our services help parties settle issues related to contracts, delays, payments, and project execution efficiently and in compliance with applicable laws.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -133,7 +133,7 @@ export const services: Service[] = [
     title: 'Branch Registration and Compliance',
     image: '/images/services/Branch Registration and Compliance.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We support the registration of branch offices in Nepal and ensure ongoing compliance with legal, tax, and regulatory requirements, including approvals, filings, renewals, and reporting obligations for smooth business operations.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -150,7 +150,7 @@ export const services: Service[] = [
     title: 'Registration of Aircraft',
     image: '/images/services/Aircraft.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We assist in the registration of aircraft in Nepal by handling required documentation, obtaining approvals from the Civil Aviation Authority of Nepal (CAAN), and ensuring compliance with aviation laws and safety regulations for lawful operation.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -168,7 +168,7 @@ export const services: Service[] = [
     title: 'Contract Drafting',
     image: '/images/services/Contract Drafting.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We prepare clear and legally sound contracts tailored to client needs, ensuring enforceability, risk protection, and compliance with applicable laws. Our services include drafting, reviewing, and negotiating agreements for individuals, businesses, and organizations.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -185,7 +185,7 @@ export const services: Service[] = [
     title: 'Hydropower Project Registration',
     image: '/images/services/Hydropower Project Registration.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We assist in registering hydropower projects in Nepal by securing approvals from relevant authorities, preparing necessary documents, and ensuring compliance with energy, environmental, and regulatory requirements for project development and operation.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -219,7 +219,7 @@ export const services: Service[] = [
     title: 'Company Registration',
     image: '/images/services/company registration.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We assist in registering companies in Nepal by preparing required documents, obtaining approvals from the Office of Company Registrar, and ensuring compliance with legal and tax requirements for smooth and lawful business establishment.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
@@ -235,10 +235,9 @@ export const services: Service[] = [
     id: 'corporate-licensing-services',
     title: 'Corporate Licensing Services',
     image: '/images/services/Corporate Licensing Services.png',
-    shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+    shortDescription:'We facilitate companies to acquire and renew necessary licenses  with legal requirements to conduct business in Nepal smoothly and legally.',
     fullDescription:
-      'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
+      'We assist businesses in obtaining and renewing required licenses in Nepal, ensuring compliance with sectoral regulations, government approvals, and legal requirements for smooth and lawful business operations.',
     keyPoints: [
       'Contract disputes',
       'Personal injury claims',
@@ -253,7 +252,7 @@ export const services: Service[] = [
     title: 'Legal Consulting',
     image: '/images/services/Legal Consulting.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'We provide professional legal advice on corporate, regulatory, and dispute matters to help clients make informed decisions, ensure compliance with Nepalese laws, and effectively manage legal risks.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [
