@@ -10,6 +10,38 @@ export type Service = {
 // Featured subset to match what the navbar shows initially.
 export const services: Service[] = [
   {
+    id: 'family-law',
+    title: 'Family Law',
+    image: '/images/services/familylaw.png',
+    shortDescription:
+      'We provide legal services in family-related matters, ensuring protection of rights and lawful resolution of disputes under Nepalese law. Our services include court marriage, divorce, child custody, property division, and other domestic matters, handled with care, confidentiality, and legal precision.',
+    fullDescription:
+      'We provide legal services in family-related matters, ensuring protection of rights and lawful resolution of disputes under Nepalese law. Our services include court marriage, divorce, child custody, property division, and other domestic matters, handled with care, confidentiality, and legal precision.',
+    keyPoints: [
+      'Court marriage: legal formalities, documentation, and registration before the court',
+      'Divorce: filing, negotiation, and court proceedings for a lawful and fair resolution',
+      'Child custody and guardianship',
+      'Property division and settlement',
+      'Other domestic and family-related matters',
+    ],
+  },
+  {
+    id: 'civil-law',
+    title: 'Civil Law',
+    image: '/images/services/civillaw.png',
+    shortDescription:
+      'We provide legal services in civil matters including property disputes, contract issues, compensation claims, and other non-criminal cases, ensuring effective representation and lawful resolution under Nepalese law.',
+    fullDescription:
+      'We provide legal services in civil matters including property disputes, contract issues, compensation claims, and other non-criminal cases, ensuring effective representation and lawful resolution under Nepalese law.',
+    keyPoints: [
+      'Property disputes and documentation support',
+      'Contract issues and enforcement',
+      'Compensation and recovery claims',
+      'Other non-criminal civil cases',
+      'Negotiation, mediation, and court representation',
+    ],
+  },
+  {
     id: 'corporate-compliance',
     title: 'Corporate compliance services',
     image: '/images/services/Corporate compliance services.png',

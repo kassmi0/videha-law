@@ -1,69 +1,78 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
-import Link from 'next/link';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { CheckCircle } from 'lucide-react';
 import { services } from '@/lib/law-data/services';
 
-export default function Services() {
-  const visibleServices = services.slice(0, 6);
+export default function ServiceDetailPage({
+  params,
+}: {
+  params: { serviceId: string };
+}) {
+  const service = services.find((s) => s.id === params.serviceId);
+
+  if (!service) notFound();
 
   return (
-    <section id="services" className="py-20 bg-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background">
+      <Header />
 
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            Our Services
-          </h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Comprehensive legal solutions tailored to your unique business and personal needs
-          </p>
-        </div>
+      <main className="py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6">
+            <Link href="/services" className="text-sm font-semibold text-primary hover:underline">
+              ← View all services
+            </Link>
+          </div>
 
-        {/* FIXED ALIGNMENT GRID */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] items-start">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{service.title}</h1>
+              <p className="mt-4 text-foreground/80 leading-relaxed">{service.fullDescription}</p>
 
-          {visibleServices.map((service) => (
-            <Card
-              key={service.title}
-              className="flex flex-col h-full overflow-hidden rounded-xl border-border/60 shadow-sm hover:shadow-xl transition-shadow"
-            >
-              <div className="relative mx-4 mt-4 h-44 overflow-hidden rounded-lg">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  quality={100}
-                  className="object-cover"
-                />
+              {service.keyPoints?.length ? (
+                <div className="mt-8">
+                  <h2 className="text-xl font-semibold text-foreground mb-4">Key services</h2>
+                  <ul className="space-y-3">
+                    {service.keyPoints.map((point) => (
+                      <li key={point} className="flex gap-3 text-foreground/80">
+                        <CheckCircle className="mt-0.5 h-5 w-5 text-primary shrink-0" />
+                        <span className="leading-relaxed">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+
+            <div className="lg:sticky lg:top-24">
+              <div className="rounded-xl border border-border/60 bg-card/80 shadow-sm overflow-hidden">
+                <div className="relative h-56 sm:h-64">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    quality={100}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-sm text-foreground/70 leading-relaxed">{service.shortDescription}</p>
+                  <div className="mt-4">
+                    <Link href="/#consultation" className="text-sm font-semibold text-primary hover:underline">
+                      Book a consultation
+                    </Link>
+                  </div>
+                </div>
               </div>
-
-              <CardHeader>
-                <CheckCircle className="w-8 h-8 text-primary mb-2" />
-                <CardTitle className="text-lg text-foreground">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-
-              {/* FIX: equal spacing alignment */}
-              <CardContent className="flex flex-col flex-1">
-                <p className="text-foreground/70">
-                  {service.shortDescription}
-                </p>
-              </CardContent>
-
-            </Card>
-          ))}
-
+            </div>
+          </div>
         </div>
+      </main>
 
-        <div className="text-center mt-12">
-          <Link href="/services" className="text-primary font-semibold hover:underline">
-            View All Services
-          </Link>
-        </div>
-
-      </div>
-    </section>
+      <Footer />
+    </div>
   );
 }
