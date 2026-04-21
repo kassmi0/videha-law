@@ -1,7 +1,12 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { services } from '@/lib/law-data/services';
 
 export default function ServicesPage() {
@@ -11,7 +16,7 @@ export default function ServicesPage() {
 
       <main className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+          
           {/* Heading */}
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-3">
@@ -23,42 +28,42 @@ export default function ServicesPage() {
           </div>
 
           {/* Grid */}
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             {services.map((service) => (
               <Card
                 key={service.id}
-                className="flex flex-col h-full rounded-lg border-border/60 bg-card/80 shadow-sm hover:shadow-md transition-shadow"
+                className="flex flex-col h-full rounded-lg border-border/60 bg-card/80 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-
                 {/* Image */}
-                <div className="relative mx-2 mt-2 h-36 shrink-0 overflow-hidden rounded-md">
+                <div className="relative mx-2 mt-2 h-40 shrink-0 overflow-hidden rounded-md">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    quality={100}
                     className="object-cover"
                   />
                 </div>
 
-                {/* Title */}
-                <CardHeader className="px-3 pt-2 pb-1">
-                  <CardTitle className="text-base font-semibold text-foreground leading-snug line-clamp-2">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
+                {/* Content */}
+                <div className="flex flex-col flex-1">
+                  
+                  {/* Title */}
+                  <CardHeader className="px-4 pt-3 pb-1">
+                    <CardTitle className="text-base font-semibold text-foreground leading-snug min-h-[48px] flex items-center justify-center text-center">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
 
-                {/* Description (FULL VISIBLE NOW) */}
-                <CardContent className="px-3 pb-3 pt-0 flex-1">
-                  <p className="text-sm text-foreground/70 leading-relaxed">
-                    {service.shortDescription}
-                  </p>
-                </CardContent>
+                  {/* Description */}
+                  <CardContent className="px-4 pb-4 pt-0">
+                    <p className="text-sm text-foreground/70 leading-relaxed text-center">
+                      {service.shortDescription}
+                    </p>
+                  </CardContent>
 
+                </div>
               </Card>
             ))}
-
           </div>
 
         </div>
