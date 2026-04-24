@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { practiceAreas } from '@/lib/law-data/practice-areas';
 import { Card, CardContent } from '@/components/ui/card';
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, MapPin, Clock, Circle, ArrowUpRight, ArrowRight } from 'lucide-react';
 
 export default async function PracticeAreaDetailPage({
   params,
@@ -16,6 +16,53 @@ export default async function PracticeAreaDetailPage({
 
   if (!area) notFound();
 
+  const relatedAreas = practiceAreas.filter((p) => p.id !== practiceId).slice(0, 3);
+
+  // Parse fullDescription into sections based on blank lines and heading detection
+  const parseSections = (text: string) => {
+    const lines = text.split('\n');
+    const sections: { heading: string | null; paragraphs: string[] }[] = [];
+    let current: { heading: string | null; paragraphs: string[] } = { heading: null, paragraphs: [] };
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+
+      // A line is a heading if it's short (under 80 chars), doesn't end with a period,
+      // and is not a numbered list item
+      const isHeading =
+        trimmed.length < 80 &&
+        !trimmed.endsWith('.') &&
+        !trimmed.endsWith(',') &&
+        !/^\d+\./.test(trimmed) &&
+        !/^[ivx]+\./i.test(trimmed) &&
+        trimmed === trimmed.replace(/[.,:;]$/, '');
+
+      // Only treat as heading if it looks like a section title (title case or all caps keywords)
+      const looksLikeHeading =
+        isHeading &&
+        (trimmed === 'Overview' ||
+          /^[A-Z]/.test(trimmed) && trimmed.split(' ').length <= 10);
+
+      if (looksLikeHeading && current.paragraphs.length > 0) {
+        sections.push(current);
+        current = { heading: trimmed, paragraphs: [] };
+      } else if (looksLikeHeading && current.paragraphs.length === 0) {
+        current.heading = trimmed;
+      } else {
+        current.paragraphs.push(trimmed);
+      }
+    }
+
+    if (current.paragraphs.length > 0 || current.heading) {
+      sections.push(current);
+    }
+
+    return sections;
+  };
+
+  const sections = parseSections(area.fullDescription);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -23,97 +70,150 @@ export default async function PracticeAreaDetailPage({
       <main className="py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="mb-6">
-            <Link
-              href="/practice-areas"
-              className="text-primary hover:underline inline-flex items-center"
-            >
-              ← Back to Practice Areas
+          {/* BREADCRUMB */}
+          <nav className="mb-6 text-sm flex items-center gap-1">
+            <Link href="/practice-areas" className="text-primary hover:underline">
+              Practice areas
             </Link>
+            <span className="text-foreground/40">/</span>
+            <span className="text-foreground/60">{area.title}</span>
+          </nav>
+
+          {/* BADGE */}
+          <div className="mb-3">
+            <span className="text-xs font-semibold tracking-widest uppercase border border-primary text-primary px-3 py-1 rounded-sm">
+              Practice Area
+            </span>
           </div>
 
+          {/* TITLE */}
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-3">
             {area.title}
           </h1>
 
-          <p className="text-foreground/70 text-lg max-w-2xl mb-8">
+          {/* SHORT DESCRIPTION */}
+          <p className="text-foreground/70 text-lg max-w-2xl mb-5">
             {area.shortDescription}
           </p>
+
+          {/* META BAR */}
+          <div className="flex flex-wrap items-center gap-5 text-sm text-foreground/60 mb-10">
+            <span className="flex items-center gap-1.5">
+              <ArrowRight className="w-2 h-2 fill-500 text-500" />
+              Available for consultation
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" />
+              Updated March 2026
+            </span>
+            <span className="flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5" />
+              Kathmandu, Nepal
+            </span>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 items-start">
 
             {/* LEFT CONTENT */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 flex flex-col gap-6">
               <Card className="bg-card/80 border-border/60">
                 <CardContent className="p-6">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-6">
+                    Overview
+                  </p>
 
-                  <div className="text-foreground/80 leading-relaxed">
-
-                    {area.fullDescription.split('\n').map((line, i) => {
-                      const trimmed = line.trim();
-
-                      if (!trimmed) return null;
-
-                      const isHeading =
-                        trimmed === 'Overview' ||
-                        area.keyPoints.some((point) => trimmed === point);
-
-                      return isHeading ? (
-                        <p
-                          key={i}
-                          className="font-bold text-foreground text-lg mt-5 mb-2"
-                        >
-                          {trimmed}
-                        </p>
-                      ) : (
-                        <p key={i} className="mb-3">
-                          {line}
-                        </p>
-                      );
-                    })}
-
+                  <div className="flex flex-col gap-5">
+                    {sections.map((section, i) => (
+                      <div key={i}>
+                        {section.heading && section.heading !== 'Overview' && (
+                          <h2 className="font-bold text-foreground text-lg mb-2">
+                            {section.heading}
+                          </h2>
+                        )}
+                        {section.paragraphs.map((para, j) => (
+                          <p key={j} className="text-foreground/80 leading-relaxed mb-3 last:mb-0">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
                   </div>
+
+                  {/* KEY AREAS OF FOCUS */}
+                  {area.keyPoints && area.keyPoints.length > 0 && (
+                    <div className="mt-8 border border-border/50 rounded-lg p-5 bg-background/40">
+                      <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-4">
+                        Key Areas of Focus
+                      </p>
+                      <ul className="flex flex-col gap-2.5">
+                        {area.keyPoints.map((point, i) => (
+                          <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                            <BadgeCheck className="w-4 h-4 mt-0.5 text-primary shrink-0" />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* DISCLAIMER */}
-                  <div className="mt-8 pt-6 border-t border-border/40">
-                    <p className="text-sm text-blue-400 leading-relaxed">
-                      Disclaimer: The information provided on this page is for general informational purposes only and does not constitute legal advice or create an attorney-client relationship. Please consult our legal professionals for advice specific to your situation.
+                  <div className="mt-8 border border-red-400/30 rounded-lg bg-red-400/5 p-4">
+                    <p className="text-sm text-red-400 leading-relaxed">
+                      <span className="font-semibold">Disclaimer:</span> The information on this page is for general informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult our legal professionals for advice specific to your situation.
                     </p>
                   </div>
-
                 </CardContent>
               </Card>
             </div>
 
-            {/* RIGHT: FIXED STICKY (ONLY CHANGE HERE) */}
-            <div className="lg:col-span-1 flex">
-              <div className="sticky top-24 self-start w-full bg-card/70 border border-border/50 rounded-lg p-6">
+            {/* RIGHT SIDEBAR */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-24 flex flex-col gap-4">
 
-                <h2 className="text-xl font-bold text-primary mb-3">
-                  Discuss This Practice Area
-                </h2>
-
-                <p className="text-sm text-foreground/70 mb-5">
-                  Speak with our team about how this practice area applies to your situation and the options available to you.
-                </p>
-
-                <div className="flex flex-col gap-3">
-
-                  <Link
-                    href="/#consultation"
-                    className="px-5 py-2 rounded-md bg-primary text-white hover:opacity-90 transition text-center"
-                  >
-                    Book Consultation
-                  </Link>
-
-                  <Link
-                    href="/#consultation"
-                    className="px-5 py-2 rounded-md border border-primary text-primary hover:bg-primary hover:text-white transition text-center"
-                  >
-                    Contact Us
-                  </Link>
-
+                {/* GET IN TOUCH */}
+                <div className="bg-card/70 border border-border/50 rounded-lg p-5">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-4">
+                    Get in Touch
+                  </p>
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      href="/#consultation"
+                      className="px-5 py-2.5 rounded-md bg-primary text-white hover:opacity-90 transition text-center font-medium text-sm"
+                    >
+                      Book a consultation
+                    </Link>
+                    <Link
+                      href="/#footer"
+                      className="px-5 py-2.5 rounded-md border border-border text-foreground/70 hover:border-primary hover:text-primary transition text-center text-sm"
+                    >
+                      Connect with us
+                    </Link>
+                  </div>
+                  <p className="text-xs text-foreground/40 text-center mt-3">
+                    Free 30-min initial consultation. No commitment required.
+                  </p>
                 </div>
+
+                {/* RELATED PRACTICE AREAS */}
+                {relatedAreas.length > 0 && (
+                  <div className="bg-card/70 border border-border/50 rounded-lg p-5">
+                    <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-4">
+                      Related Practice Areas
+                    </p>
+                    <div className="flex flex-col gap-1">
+                      {relatedAreas.map((related) => (
+                        <Link
+                          key={related.id}
+                          href={`/practice-areas/${related.id}`}
+                          className="flex items-center justify-between py-2 text-sm text-primary hover:underline group"
+                        >
+                          {related.title}
+                          <ArrowUpRight className="w-3.5 h-3.5 shrink-0 opacity-60 group-hover:opacity-100 transition" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
               </div>
             </div>

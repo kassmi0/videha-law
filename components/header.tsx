@@ -14,11 +14,13 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { practiceAreas } from '@/lib/law-data/practice-areas';
 import { services } from '@/lib/law-data/services';
+import { allInsightArticles } from '@/lib/insights-data';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showPractice, setShowPractice] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [showInsights, setShowInsights] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
@@ -35,11 +37,11 @@ export default function Header() {
               className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 object-contain"
             />
             <div>
-              <p className="text-sm md:text-base font-bold" style={{ color: '#013367' }}>
+              <p className="text-sm md:text-base font-bold" style={{ color: '#2E2E2E' }}>
                 Videha Law and Associates
               </p>
-              <p className="hidden lg:block text-xs" style={{ color: '#013367' }}>
-                Premier Corporate Law Firm in Nepal
+              <p className="hidden lg:block text-xs" style={{ color: '#2E2E2E' }}>
+                Advocates Advisor  Agent of justice
               </p>
             </div>
           </Link>
@@ -47,17 +49,17 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
 
-            <Link href="/#about" style={{ color: '#013367' }}>
+            <Link href="/#about" style={{ color: '#2E2E2E' }}>
               About
             </Link>
 
             {/* Practice Areas */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button style={{ color: '#013367' }}>Practice Areas</button>
+                <button style={{ color: '#2E2E2E' }}>Practice Areas</button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className="bg-[#013367] text-white w-72">
+              <DropdownMenuContent className="bg-[#FAFAFA] text-charcoal w-72">
                 {practiceAreas.map((area) => (
                   <DropdownMenuItem asChild key={area.id}>
                     <Link href={`/practice-areas/${area.id}`}>
@@ -65,9 +67,7 @@ export default function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
-
                 <DropdownMenuSeparator />
-
                 <DropdownMenuItem asChild>
                   <Link href="/practice-areas">
                     View All Practice Areas
@@ -79,15 +79,15 @@ export default function Header() {
             {/* Services */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button style={{ color: '#013367' }}>Services</button>
+                <button style={{ color: '#2E2E2E' }}>Services</button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className="bg-[#013367] text-white w-72">
+              <DropdownMenuContent className="bg-[#FAFAFA] text-charcoal w-72">
                 {services.map((service) => (
                   <DropdownMenuItem asChild key={service.id}>
                     <Link
                       href={{
-                        pathname: "/services",
+                        pathname: '/services',
                         hash: service.id,
                       }}
                     >
@@ -95,27 +95,42 @@ export default function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
-
                 <DropdownMenuSeparator />
-
                 <DropdownMenuItem asChild>
                   <Link href="/services">View All Services</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/#insights" style={{ color: '#013367' }}>
-              Insights
-            </Link>
+            {/* Insights */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button style={{ color: '#2E2E2E' }}>Insights</button>
+              </DropdownMenuTrigger>
 
-            <Link href="/#consultation" style={{ color: '#013367' }}>
+              <DropdownMenuContent className="bg-[#FAFAFA] text-charcoal w-72">
+                {allInsightArticles.map((article) => (
+                  <DropdownMenuItem asChild key={article.slug}>
+                    <Link href={`/insights/${article.slug}`}>
+                      {article.title}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link href="/insights">View All Insights</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link href="/#consultation" style={{ color: '#2E2E2E' }}>
               Contact
             </Link>
           </nav>
 
           {/* Desktop Button */}
           <div className="hidden lg:flex">
-            <Button asChild style={{ backgroundColor: '#013367' }}>
+            <Button asChild style={{ backgroundColor: '#58081F' }}>
               <a href="/#consultation" className="text-white">
                 Book Consultation
               </a>
@@ -126,7 +141,7 @@ export default function Header() {
           <button
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
-            style={{ color: '#013367' }}
+            style={{ color: '#2E2E2E' }}
           >
             {isOpen ? <X /> : <Menu />}
           </button>
@@ -140,12 +155,11 @@ export default function Header() {
               About
             </Link>
 
-            {/* Practice */}
+            {/* Practice Mobile */}
             <div>
               <button onClick={() => setShowPractice(!showPractice)}>
                 Practice Areas {showPractice ? '−' : '+'}
               </button>
-
               {showPractice && (
                 <div className="pl-3 mt-2 flex flex-col gap-2">
                   {practiceAreas.map((area) => (
@@ -164,19 +178,18 @@ export default function Header() {
               )}
             </div>
 
-            {/* Services */}
+            {/* Services Mobile */}
             <div>
               <button onClick={() => setShowServices(!showServices)}>
                 Services {showServices ? '−' : '+'}
               </button>
-
               {showServices && (
                 <div className="pl-3 mt-2 flex flex-col gap-2">
                   {services.map((service) => (
                     <Link
                       key={service.id}
                       href={{
-                        pathname: "/services",
+                        pathname: '/services',
                         hash: service.id,
                       }}
                       onClick={() => setIsOpen(false)}
@@ -184,7 +197,6 @@ export default function Header() {
                       {service.title}
                     </Link>
                   ))}
-
                   <Link href="/services" onClick={() => setIsOpen(false)}>
                     View All Services
                   </Link>
@@ -192,9 +204,28 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/#insights" onClick={() => setIsOpen(false)}>
-              Insights
-            </Link>
+            {/* Insights Mobile */}
+            <div>
+              <button onClick={() => setShowInsights(!showInsights)}>
+                Insights {showInsights ? '−' : '+'}
+              </button>
+              {showInsights && (
+                <div className="pl-3 mt-2 flex flex-col gap-2">
+                  {allInsightArticles.map((article) => (
+                    <Link
+                      key={article.slug}
+                      href={`/insights/${article.slug}`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {article.title}
+                    </Link>
+                  ))}
+                  <Link href="/insights" onClick={() => setIsOpen(false)}>
+                    View All Insights
+                  </Link>
+                </div>
+              )}
+            </div>
 
             <Link href="/#consultation" onClick={() => setIsOpen(false)}>
               Contact

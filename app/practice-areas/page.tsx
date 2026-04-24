@@ -38,13 +38,18 @@ export default function PracticeAreasPage() {
                     className="object-cover"
                   />
                 </div>
+
                 <CardHeader>
-                  <CardTitle className="text-xl text-foreground">
+                  <CardTitle className="text-xl text-[#58081F]">
                     {area.title}
                   </CardTitle>
                 </CardHeader>
+
                 <CardContent className="space-y-4">
-                  <p className="text-foreground/70">{area.shortDescription}</p>
+                  <p className="text-foreground/70">
+                    {area.shortDescription}
+                  </p>
+
                   <Link
                     href={`/practice-areas/${area.id}`}
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
@@ -62,4 +67,3 @@ export default function PracticeAreasPage() {
     </div>
   );
 }
-

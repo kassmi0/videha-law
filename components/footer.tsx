@@ -5,7 +5,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-primary text-primary-foreground">
+    <footer id="footer" className="border-t border-border bg-primary text-primary-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* MAIN GRID FIXED */}
@@ -45,13 +45,13 @@ export default function Footer() {
             {/* ICON WRAP FIXED */}
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
               {[
-{
-  label: 'WhatsApp',
-  href: 'https://wa.me/9747201706',
-  icon: <FaWhatsapp className="h-5 w-5" aria-hidden="true" />,
-  hover: 'hover:bg-green-500/20 hover:text-green-100',
-  external: true,
-},
+                {
+                  label: 'WhatsApp',
+                  href: 'https://wa.me/9747201706',
+                  icon: <FaWhatsapp className="h-5 w-5" aria-hidden="true" />,
+                  hover: 'hover:bg-green-500/20 hover:text-green-100',
+                  external: true,
+                },
                 {
                   label: 'Facebook',
                   href: 'https://www.facebook.com/profile.php?id=61570958068623',
@@ -115,7 +115,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Menu</h4>
               <ul className="space-y-2 text-sm opacity-80">
                 <li><Link href="/#about">About</Link></li>
-                <li><Link href="/#practice-areas">Practice Areas</Link></li>
+                <li><Link href="/#practice-areas">PracticeAreas</Link></li>
                 <li><Link href="/#services">Services</Link></li>
                 <li><Link href="/#insights">Insights</Link></li>
                 <li><Link href="/#consultation">Contact</Link></li>

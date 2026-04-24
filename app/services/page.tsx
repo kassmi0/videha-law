@@ -49,7 +49,7 @@ export default function ServicesPage() {
                   
                   {/* Title */}
                   <CardHeader className="px-4 pt-3 pb-1">
-                    <CardTitle className="text-base font-semibold text-foreground leading-snug min-h-[48px] flex items-center justify-center text-center">
+                    <CardTitle className="text-base font-semibold text-[#58081F] leading-snug min-h-[48px] flex items-center justify-center text-center">
                       {service.title}
                     </CardTitle>
                   </CardHeader>

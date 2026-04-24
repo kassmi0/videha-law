@@ -204,7 +204,7 @@ export const services: Service[] = [
     title: 'Legal Reform',
     image: '/images/services/Legal Reform.png',
     shortDescription:
-      'Aggressive representation in civil disputes and commercial litigation.',
+      'Legal Reform involves advocating for improvements in laws and policies while providing strong representation in civil disputes and commercial litigation to protect client interests.',
     fullDescription:
       'Our litigation team has extensive courtroom experience in state and federal courts. We represent clients in complex civil disputes, commercial litigation, and appellate matters.',
     keyPoints: [

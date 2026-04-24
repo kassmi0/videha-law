@@ -76,10 +76,10 @@ export default function Consultation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Need Legal Assistance? Schedule a Consultation Today
+          Seeking Legal Assistance? Book Your Consultation Today
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Get in touch with our legal experts to discuss your case and find the right solution for your needs
+          Speak with our experienced attorneys to review your case and explore the right solutions for your situation.
           </p>
         </div>
 
