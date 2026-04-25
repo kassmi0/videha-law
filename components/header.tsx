@@ -132,7 +132,7 @@ export default function Header() {
           <div className="hidden lg:flex">
             <Button asChild style={{ backgroundColor: '#58081F' }}>
               <a href="/#consultation" className="text-white">
-                Book Consultation
+              Schedule a Meeting
               </a>
             </Button>
           </div>
@@ -233,7 +233,7 @@ export default function Header() {
 
             <Button asChild>
               <a href="/#consultation" onClick={() => setIsOpen(false)}>
-                Book Consultation
+              Schedule a Meeting
               </a>
             </Button>
           </nav>

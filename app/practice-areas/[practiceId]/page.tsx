@@ -169,31 +169,6 @@ export default async function PracticeAreaDetailPage({
             {/* RIGHT SIDEBAR */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 flex flex-col gap-4">
-
-                {/* GET IN TOUCH */}
-                <div className="bg-card/70 border border-border/50 rounded-lg p-5">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-4">
-                    Get in Touch
-                  </p>
-                  <div className="flex flex-col gap-3">
-                    <Link
-                      href="/#consultation"
-                      className="px-5 py-2.5 rounded-md bg-primary text-white hover:opacity-90 transition text-center font-medium text-sm"
-                    >
-                      Book a consultation
-                    </Link>
-                    <Link
-                      href="/#footer"
-                      className="px-5 py-2.5 rounded-md border border-border text-foreground/70 hover:border-primary hover:text-primary transition text-center text-sm"
-                    >
-                      Connect with us
-                    </Link>
-                  </div>
-                  <p className="text-xs text-foreground/40 text-center mt-3">
-                    Free 30-min initial consultation. No commitment required.
-                  </p>
-                </div>
-
                 {/* RELATED PRACTICE AREAS */}
                 {relatedAreas.length > 0 && (
                   <div className="bg-card/70 border border-border/50 rounded-lg p-5">

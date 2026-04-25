@@ -8,34 +8,7 @@ export type PracticeArea = {
 };
 
 export const practiceAreas: PracticeArea[] = [
-  {
-    id: 'foreign-direct-investment',
-    title: 'Foreign Direct Investment (FDI) & Market Entry',
-    image: '/images/practice-areas/fdi.png',
-    shortDescription:
-      'Guiding global investment with local legal precision.',
-    fullDescription:
-      `Overview
-At Videha Law and Associates, our Foreign Direct Investment (FDI) practice is structured to support international investors, multinational enterprises, and Non-Resident Nepalis in successfully entering and operating within Nepal’s evolving market. Nepal offers significant investment potential across sectors such as energy, tourism, infrastructure, agriculture, and technology; however, the regulatory landscape can be complex and requires careful legal navigation. Our role is to streamline this process by providing end-to-end legal guidance—from initial feasibility analysis and structuring of investment to regulatory approvals, operational compliance, and eventual profit repatriation. By aligning business objectives with the legal framework established under the Foreign Investment and Technology Transfer Act 2019 (Nepal) and other governing laws, we ensure that investments are structured efficiently, lawfully, and with long-term sustainability in mind.
-We assist clients in determining the most suitable market entry strategy based on their commercial goals, financial capacity, and risk considerations. This may involve establishing joint ventures with local partners to benefit from market knowledge and shared operational responsibilities, or setting up wholly owned subsidiaries that provide greater control over management and decision-making. For investors seeking quicker market penetration, we also advise on mergers and acquisitions of existing Nepalese companies, conducting thorough legal due diligence to identify risks and ensure compliance. Additionally, we provide guidance on public-private partnership models for large-scale projects and offer specialized advisory services to diaspora investors under relevant legal provisions. Our approach is grounded in practical legal insight, ensuring that each structure not only complies with regulatory requirements but also supports long-term business growth.
-Navigating regulatory approvals is a critical component of foreign investment in Nepal, and our firm manages this process comprehensively. We prepare and submit all necessary documentation to relevant authorities, including the Department of Industry and other sector-specific regulators, while also coordinating with Nepal Rastra Bank for foreign exchange approvals. Beyond initial approvals, we ensure that investors meet all post-incorporation requirements, including company registration, tax compliance, licensing, and reporting obligations. Our ongoing compliance support helps clients adapt to regulatory changes and maintain smooth operations within Nepal’s legal framework.
-A key concern for foreign investors is the protection of their investment and the ability to repatriate profits. We provide detailed legal guidance on profit repatriation procedures, ensuring compliance with tax laws and central bank regulations so that dividends, capital, and returns can be transferred abroad without complications. At the same time, we advise on investment protection mechanisms available under domestic laws and international agreements, structuring investments to safeguard against risks such as expropriation or regulatory uncertainty. In the event of disputes, we represent clients in negotiation, mediation, or arbitration to protect their financial and operational interests.
-Our services also extend to sector-specific advisory, recognizing that different industries in Nepal are subject to distinct regulatory requirements and incentive structures. Whether assisting with licensing in hydropower projects, compliance in manufacturing operations, or intellectual property considerations in the technology sector, we tailor our legal strategies to align with industry-specific demands. We further support clients through comprehensive due diligence and risk assessment, identifying potential legal, financial, and regulatory issues before investment decisions are finalized. This proactive approach enables investors to mitigate risks and make informed choices.
-Beyond the initial investment phase, Videha Law and Associates remains a long-term legal partner. We provide ongoing corporate advisory services, assist with employment and immigration matters for foreign personnel, and support business expansion, restructuring, or exit strategies. Our client-focused approach ensures continuous legal compliance while facilitating growth and operational efficiency. With a strong understanding of both Nepalese law and international business practices, we are committed to delivering reliable, strategic, and practical legal solutions that enable investors to confidently establish and expand their presence in Nepal.
-`,
-    keyPoints: [
-      'Market Entry Strategies & Structuring',
-      'Regulatory Approvals & Compliance Framework',
-      'Investment Protection & Profit Repatriation',
-      'Sector-Specific Investment Advisory',
-      'Due Diligence & Risk Management',
-      'Post-Investment Support & Expansion',
-      'Why Choose Buddha Bhumi Law for FDI Services',
-      'Frequently Asked Questions: Foreign Direct Investment',
-      'Ready to Invest in Nepal?',
-      
-    ],
-  },
+
   {
     id: 'intellectual-property-law',
     title: 'Intellectual Property Law',
@@ -1210,6 +1183,34 @@ Operating a non-profit organization requires strong legal foundations to ensure 
       'Can NGOs engage in advocacy?',
       'What is the difference between staff and volunteers?',
       'Ready to Strengthen Your Non-Profit Impact?',
+    ],
+  },
+  {
+    id: 'foreign-direct-investment',
+    title: 'Foreign Direct Investment (FDI) & Market Entry',
+    image: '/images/practice-areas/fdi.png',
+    shortDescription:
+      'Guiding global investment with local legal precision.',
+    fullDescription:
+      `Overview
+At Videha Law and Associates, our Foreign Direct Investment (FDI) practice is structured to support international investors, multinational enterprises, and Non-Resident Nepalis in successfully entering and operating within Nepal’s evolving market. Nepal offers significant investment potential across sectors such as energy, tourism, infrastructure, agriculture, and technology; however, the regulatory landscape can be complex and requires careful legal navigation. Our role is to streamline this process by providing end-to-end legal guidance—from initial feasibility analysis and structuring of investment to regulatory approvals, operational compliance, and eventual profit repatriation. By aligning business objectives with the legal framework established under the Foreign Investment and Technology Transfer Act 2019 (Nepal) and other governing laws, we ensure that investments are structured efficiently, lawfully, and with long-term sustainability in mind.
+We assist clients in determining the most suitable market entry strategy based on their commercial goals, financial capacity, and risk considerations. This may involve establishing joint ventures with local partners to benefit from market knowledge and shared operational responsibilities, or setting up wholly owned subsidiaries that provide greater control over management and decision-making. For investors seeking quicker market penetration, we also advise on mergers and acquisitions of existing Nepalese companies, conducting thorough legal due diligence to identify risks and ensure compliance. Additionally, we provide guidance on public-private partnership models for large-scale projects and offer specialized advisory services to diaspora investors under relevant legal provisions. Our approach is grounded in practical legal insight, ensuring that each structure not only complies with regulatory requirements but also supports long-term business growth.
+Navigating regulatory approvals is a critical component of foreign investment in Nepal, and our firm manages this process comprehensively. We prepare and submit all necessary documentation to relevant authorities, including the Department of Industry and other sector-specific regulators, while also coordinating with Nepal Rastra Bank for foreign exchange approvals. Beyond initial approvals, we ensure that investors meet all post-incorporation requirements, including company registration, tax compliance, licensing, and reporting obligations. Our ongoing compliance support helps clients adapt to regulatory changes and maintain smooth operations within Nepal’s legal framework.
+A key concern for foreign investors is the protection of their investment and the ability to repatriate profits. We provide detailed legal guidance on profit repatriation procedures, ensuring compliance with tax laws and central bank regulations so that dividends, capital, and returns can be transferred abroad without complications. At the same time, we advise on investment protection mechanisms available under domestic laws and international agreements, structuring investments to safeguard against risks such as expropriation or regulatory uncertainty. In the event of disputes, we represent clients in negotiation, mediation, or arbitration to protect their financial and operational interests.
+Our services also extend to sector-specific advisory, recognizing that different industries in Nepal are subject to distinct regulatory requirements and incentive structures. Whether assisting with licensing in hydropower projects, compliance in manufacturing operations, or intellectual property considerations in the technology sector, we tailor our legal strategies to align with industry-specific demands. We further support clients through comprehensive due diligence and risk assessment, identifying potential legal, financial, and regulatory issues before investment decisions are finalized. This proactive approach enables investors to mitigate risks and make informed choices.
+Beyond the initial investment phase, Videha Law and Associates remains a long-term legal partner. We provide ongoing corporate advisory services, assist with employment and immigration matters for foreign personnel, and support business expansion, restructuring, or exit strategies. Our client-focused approach ensures continuous legal compliance while facilitating growth and operational efficiency. With a strong understanding of both Nepalese law and international business practices, we are committed to delivering reliable, strategic, and practical legal solutions that enable investors to confidently establish and expand their presence in Nepal.
+`,
+    keyPoints: [
+      'Market Entry Strategies & Structuring',
+      'Regulatory Approvals & Compliance Framework',
+      'Investment Protection & Profit Repatriation',
+      'Sector-Specific Investment Advisory',
+      'Due Diligence & Risk Management',
+      'Post-Investment Support & Expansion',
+      'Why Choose Buddha Bhumi Law for FDI Services',
+      'Frequently Asked Questions: Foreign Direct Investment',
+      'Ready to Invest in Nepal?',
+      
     ],
   },
   {

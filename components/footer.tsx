@@ -137,7 +137,7 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="pt-6 border-t border-white/10 text-sm flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
-          <p>© 2026 Videha Law and Associates. All Rights Reserved.</p>
+          <p>© 2026 Videha Law and Associates.</p>
           <p>This website is for informational purposes only. Contact the legal Team.</p>
         </div>
 

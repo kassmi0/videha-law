@@ -40,15 +40,11 @@ export default function PracticeAreasPage() {
                 </div>
 
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#58081F]">
-                    {area.title}
-                  </CardTitle>
+                  <CardTitle className="text-xl text-[#58081F]">{area.title}</CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <p className="text-foreground/70">
-                    {area.shortDescription}
-                  </p>
+                  <p className="text-foreground/70">{area.shortDescription}</p>
 
                   <Link
                     href={`/practice-areas/${area.id}`}

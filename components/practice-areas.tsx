@@ -15,9 +15,6 @@ export default function PracticeAreas() {
           <h2 className="text-5xl font-bold text-[#58081F] mb-4">
             Practice Areas
           </h2>
-          <p className="text-[#2E2E2E]/70 text-lg">
-            Focused expertise across critical legal domains, delivering clarity in complex matters.
-          </p>
         </div>
 
         {/* MAIN GRID */}

@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Consultation() {
   const [formData, setFormData] = useState({
@@ -72,87 +70,117 @@ export default function Consultation() {
   };
 
   return (
-    <section id="consultation" className="py-20 bg-card">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">
-          Seeking Legal Assistance? Book Your Consultation Today
-          </h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-          Speak with our experienced attorneys to review your case and explore the right solutions for your situation.
-          </p>
-        </div>
+    <section id="consultation" className="py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid overflow-hidden rounded-3xl border border-primary/15 bg-card shadow-2xl shadow-primary/10 lg:grid-cols-5">
+          <div className="lg:col-span-2 bg-primary text-primary-foreground p-8 sm:p-10">
+            <p className="inline-flex rounded-full border border-primary-foreground/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+              Book Consultation
+            </p>
+            <h2 className="mt-5 text-3xl font-bold leading-tight">
+              Get legal guidance from our experts.
+            </h2>
+            <p className="mt-4 text-primary-foreground/85">
+              Share your case details, and we will connect you with the right attorney for a clear
+              next step.
+            </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-6">
-              Book Your Free Consultation
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
-                  Full Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  className="w-full"
-                  required
-                />
+            <div className="mt-8 space-y-4" id="contact">
+              <div className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-4">
+                <p className="text-xs uppercase tracking-wide text-primary-foreground/80">Email</p>
+                <p className="mt-1 font-medium">infovidehalaw@gmail.com</p>
+              </div>
+              <div className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-4">
+                <p className="text-xs uppercase tracking-wide text-primary-foreground/80">Phone</p>
+                <p className="mt-1 font-medium">+977 9747201706</p>
+              </div>
+              <div className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-4">
+                <p className="text-xs uppercase tracking-wide text-primary-foreground/80">Office</p>
+                <p className="mt-1 font-medium">New-Baneshwor, Kathmandu 44600, Nepal</p>
+              </div>
+              <div className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-4">
+                <p className="text-xs uppercase tracking-wide text-primary-foreground/80">Hours</p>
+                <p className="mt-1 font-medium">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p className="text-sm text-primary-foreground/80">Saturday and Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-3 p-8 sm:p-10">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-primary">Tell us about your matter</h3>
+              <p className="mt-2 text-foreground/70">
+                Complete this short form and we will contact you shortly.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="mb-1 block text-sm font-medium text-foreground">
+                    Full Name
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    className="h-11"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="mb-1 block text-sm font-medium text-foreground">
+                    Email Address
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
+                    className="h-11"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="phone" className="mb-1 block text-sm font-medium text-foreground">
+                    Phone Number
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+977"
+                    className="h-11"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="mb-1 block text-sm font-medium text-foreground">
+                    Subject
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="What do you need help with?"
+                    className="h-11"
+                    required
+                  />
+                </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
-                  Email Address
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="your@email.com"
-                  className="w-full"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
-                  Phone Number
-                </label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+977"
-                  className="w-full"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="What do you need help with?"
-                  className="w-full"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
+                <label htmlFor="message" className="mb-1 block text-sm font-medium text-foreground">
                   Message
                 </label>
                 <Textarea
@@ -161,20 +189,22 @@ export default function Consultation() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your legal matter..."
-                  rows={5}
-                  className="w-full"
+                  rows={6}
                   required
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" size="lg" className="w-full sm:w-auto px-8" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
               </Button>
+
               {submitStatus.type ? (
                 <p
                   className={[
-                    'text-sm',
-                    submitStatus.type === 'success' ? 'text-green-600' : 'text-red-600',
+                    'rounded-md border px-3 py-2 text-sm',
+                    submitStatus.type === 'success'
+                      ? 'border-green-200 bg-green-50 text-green-700'
+                      : 'border-red-200 bg-red-50 text-red-700',
                   ].join(' ')}
                   role="status"
                 >
@@ -182,71 +212,6 @@ export default function Consultation() {
                 </p>
               ) : null}
             </form>
-          </div>
-
-          <div className="space-y-6">
-            <div>
-              <h3
-                className="text-2xl font-bold text-primary mb-6"
-                id="contact"
-              >
-                Contact Information
-              </h3>
-            </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-primary" />
-                  Email
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">infovidehalaw@gmail.com</p>
-                
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-primary" />
-                  Phone
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">+977 9747201706</p>
-                
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  Office Location
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">  New-Baneshwor, Kathmandu 44600, Nepal</p>
-                {/* <p className="text-foreground/80">Corporate Plaza, Suite 500</p>
-                <p className="text-foreground/80">City, State 12345</p> */}
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-primary" />
-                  Business Hours
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-foreground/80">Saturday and sunday : closed</p>
-               
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
