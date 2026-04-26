@@ -143,7 +143,7 @@ export default function Consultation() {
 
           <div className="lg:col-span-3 p-8 sm:p-10">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-primary">çSend Your Inquiry</h2>
+              <h2 className="text-3xl font-bold text-primary">Send Your Inquiry</h2>
               <p className="mt-2 text-sm text-foreground/70">
                 Complete a few quick steps and we&apos;ll get back to you
               </p>
