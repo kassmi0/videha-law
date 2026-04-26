@@ -14,7 +14,7 @@ export const practiceAreas: PracticeArea[] = [
     title: 'Intellectual Property Law',
     image: '/images/practice-areas/intellectual.png',
     shortDescription:
-      'Protecting ideas that power your future.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Intellectual Property practice is built around one simple idea: your ideas, creativity, and brand identity deserve serious legal protection. In today’s knowledge-driven economy, intellectual property is often the most asset a business owns whether it’s a distinctive trademark, an innovative invention, original creative work, or confidential business know-how. Nepal’s legal framework, shaped by laws like the Patent, Design and Trademark Act and the Copyright Act, along with international commitments under the TRIPS Agreement and global conventions, provides strong protection but only if navigated strategically. We help startups, creators, and established businesses turn their intellectual assets into secure, enforceable, and commercially valuable rights.
@@ -45,7 +45,7 @@ At its core, our Intellectual Property practice is about helping you stay ahead,
     title: 'Company Law and Corporate Governance',
     image: '/images/practice-areas/company.png',
     shortDescription:
-      'Building compliant, resilient, and accountable businesses in Nepal.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Company Law and Corporate Governance practice is designed to support businesses at every stage of their lifecycle from incorporation and early growth to restructuring and eventual exit. Nepal’s corporate environment is primarily governed by the Companies Act 2006 (Nepal), along with complementary laws such as the Securities Act 2007 (Nepal) and the Insolvency Act 2006 (Nepal). Successfully navigating this framework requires not only technical legal expertise but also a clear understanding of how legal compliance aligns with broader commercial strategy. Our firm advises domestic and international clients including startups, joint ventures, subsidiaries, and established enterprises on building strong legal foundations, maintaining sound governance structures, and executing strategic corporate decisions with confidence.
@@ -67,7 +67,7 @@ Ultimately, Videha Law and Associates combines deep knowledge of Nepalese corpor
     title: 'Commercial Contracts',
     image: '/images/practice-areas/Commercial Contracts.png',
     shortDescription:
-      'Well-drafted agreements that ensure protection and build lasting partnerships.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Commercial Contracts practice focuses on protecting the core operations of your business through carefully structured, negotiated, and managed agreements. In Nepal’s evolving commercial landscape, nearly every business activity, whether it involves trading goods, delivering services, leasing assets, or collaborating with partners relies on strong contractual foundations. A well prepared commercial contract not only defines the rights and responsibilities of each party but also plays a crucial role in allocating risk, preventing disputes, and ensuring enforceability.
@@ -139,7 +139,7 @@ In some cases, yes. However, contracts performed within Nepal are generally gove
     title: 'Merger & Acquisition',
     image: '/images/practice-areas/Merger & Acquisition.png',
     shortDescription:
-      'Strategic deals, executed with legal certainty and commercial insight.',
+      '',
     fullDescription:
       `Overview
      At Videha Law and Associates, our Merger and Acquisition (M&A) practice delivers high-level legal counsel to businesses undertaking complex corporate transactions in Nepal. M&A transactions represent pivotal moments in a company’s lifecycle, enabling strategic expansion, consolidation, diversification, and long-term value creation.
@@ -235,7 +235,7 @@ keyPoints: [
     title: 'Banking & Finance Law',
     image: '/images/practice-areas/banking-finance.png',
     shortDescription:
-      'Securing financial transactions with trusted legal insight in Nepal.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Banking and Finance Law practice is designed to provide strategic and comprehensive legal support to banks, financial institutions, fintech companies, corporate borrowers, and investors operating within Nepal’s evolving financial system. The sector is primarily regulated by institutions such as Nepal Rastra Bank and governed by key legislation including the Banks and Financial Institutions Act 2017 (Nepal), Negotiable Instruments Act 1977 (Nepal), Securities Act 2007 (Nepal), and Insolvency Act 2006 (Nepal). Navigating this framework requires not only legal precision but also a strong understanding of financial markets, regulatory expectations, and commercial realities. Our firm advises clients on structuring transactions, ensuring compliance, managing financial risks, and resolving disputes in a manner that aligns legal requirements with business objectives.
@@ -257,7 +257,7 @@ Ultimately, Videha Law and Associates combines technical legal expertise with a 
     title: 'Corporate Taxation',
     image: '/images/practice-areas/corporate taxation.png',
     shortDescription:
-      'Optimizing tax strategy within legal frameworks.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Corporate Taxation practice is designed to help businesses navigate Nepal’s tax system with clarity, strategy, and confidence. Tax is not just about filing returns or meeting deadlines—it directly shapes how a business grows, invests, and sustains profitability over time. With Nepal’s framework built around laws like the Income Tax Act, Value Added Tax Act, and evolving directives from the Inland Revenue Department, managing tax obligations requires both technical precision and a strong commercial mindset. We work with domestic companies, foreign investors, startups, and established enterprises to ensure that their tax positions are not only compliant but also structured in a way that supports long-term business goals.
@@ -291,7 +291,7 @@ Ultimately, our Corporate Taxation practice is about creating balance ensuring f
     title: 'Real Estate Law',
     image: '/images/practice-areas/real estate.png',
     shortDescription:
-      'Securing property interests with legal assurance.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Real Estate Law practice delivers full-spectrum legal support to property owners, developers, investors, banks, government bodies, and individuals dealing with Nepal’s increasingly complex property and land system. Real estate is one of the most valuable assets in both personal and commercial contexts, and every transaction involving land or buildings needs careful legal handling to ensure clear ownership, compliance with regulations, and enforceable rights.
@@ -392,7 +392,7 @@ Real estate decisions involve high value and high risk, so legal clarity is esse
     title: 'Energy and Infrastructure Law',
     image: '/images/practice-areas/energy-infrastructure.png',
     shortDescription:
-      'Powering progress through legal certainty.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Energy and Infrastructure Law practice is dedicated to supporting the development, financing, and operation of projects that are central to Nepal’s economic growth. Nepal holds immense potential in hydropower, renewable energy, transportation, and urban infrastructure, yet realizing these opportunities requires careful navigation of complex legal, regulatory, and environmental frameworks. Our firm provides end-to-end legal support to developers, contractors, investors, financial institutions, and government bodies involved in such projects. By aligning commercial objectives with Nepal’s legal structure, including laws like the Electricity Act 1992 (Nepal), Public Procurement Act 2007 (Nepal), and Environment Protection Act 2019 (Nepal). we ensure that projects are not only legally compliant but also commercially viable and socially responsible.
@@ -415,7 +415,7 @@ Ultimately, Videha Law and Associates combines legal expertise with practical in
     title: 'Aviation Law',
     image: '/images/practice-areas/aviation-law.png',
     shortDescription:
-      'Navigating airspace with regulatory clarity.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Aviation Law practice delivers specialized legal support to airlines, airport operators, aircraft lessors, maintenance organizations, cargo carriers, drone operators, and investors operating within Nepal’s evolving aviation sector. Nepal’s challenging geography, expanding tourism industry, and strategic regional position create strong opportunities for aviation growth. However, these opportunities are accompanied by complex regulatory frameworks, safety requirements, and operational risks.
@@ -505,7 +505,7 @@ Nepal follows the Cape Town Convention framework, allowing registration and enfo
     title: 'Labor and Employment Law',
     image: '/images/practice-areas/labour.png',
     shortDescription:
-      'Balancing workplace rights and business needs.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Labor and Employment Law practice delivers end-to-end legal support to employers, employees, trade unions, and HR professionals dealing with Nepal’s fast-changing workplace legal environment. Employment relationships sit at the core of business operations and are often the most sensitive part of any organization, shaped by statutory law, contracts, internal policies, and social expectations. In Nepal, this area is mainly governed by the Labor Act 2074 (2017), Social Security Act 2075 (2018), Trade Union Act, Foreign Employment Act, and various rules, directives, and court decisions that define rights and obligations of both employers and workers.
@@ -586,7 +586,7 @@ Managing employment relationships effectively is key to organizational success i
     title: 'Information and Communication Technology Law',
     image: '/images/practice-areas/ict .png',
     shortDescription:
-      'Regulating technology in a connected world.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our ICT Law practice provides full legal support to tech companies, digital platforms, telecom operators, fintech startups, software developers, and businesses going through digital transformation. In today’s world, where everything is going online from payments to communication to data storage technology law has become a core part of doing business. Nepal’s digital legal framework mainly includes the Electronic Transactions Act, Privacy Act, Telecommunications Act, Copyright Act, and regulations issued by bodies like Nepal Telecommunications Authority, Department of Information Technology, and Nepal Rastra Bank.
@@ -686,7 +686,7 @@ Technology moves fast, but legal risk moves with it. At Videha Law and Associate
     title: 'Media and Entertainment Law',
     image: '/images/practice-areas/media.png',
     shortDescription:
-      'Legal support for media creators and businesses on rights disputes.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Media and Entertainment Law practice provides complete legal support to filmmakers, production houses, OTT platforms, broadcasters, artists, musicians, advertisers, publishers, influencers, and digital media companies operating in Nepal’s fast-growing creative industry.
@@ -779,7 +779,7 @@ In media and entertainment, creativity moves fast but legal issues move just as 
     title: 'Construction Law',
     image: '/images/practice-areas/construction.png',
     shortDescription:
-      'Building projects on a strong legal foundation.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Construction Law practice provides sophisticated and end-to-end legal advisory to contractors, developers, engineers, architects, project owners, government agencies, and financial institutions engaged in Nepal’s construction and infrastructure sector. Construction projects involve substantial capital deployment, technical complexity, and multi-party coordination, all operating within a tightly regulated legal framework governing land acquisition, environmental compliance, labor obligations, procurement processes, and contractual enforcement.
@@ -867,7 +867,7 @@ We regularly advise on dispute resolution timelines, extension of time entitleme
     title: 'Dispute Resolution & Arbitration',
     image: '/images/practice-areas/dispute.png',
     shortDescription:
-      'Resolving conflicts with precision and efficiency.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our Dispute Resolution and Arbitration practice offers end-to-end legal support to businesses, individuals, government bodies, and international clients dealing with disputes in Nepal and across jurisdictions. Disputes are a natural part of commercial dealings, contractual obligations, and regulatory interactions, and the manner in which they are resolved can have a major impact on business continuity, financial stability, and reputation.
@@ -958,7 +958,7 @@ Dispute resolution requires strategic thinking, legal expertise, and practical e
     title: 'International Trade Law',
     image: '/images/practice-areas/international-trade.png',
     shortDescription:
-      'Legal support for cross-border trade, finance, and international contracts .',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our International Trade Law practice delivers comprehensive legal support to exporters, importers, manufacturers, trading entities, logistics operators, government bodies, and investors engaged in cross-border commercial activities. In today’s globally integrated economy, international trade creates significant opportunities for expansion, diversification, and economic progress, but it also involves complex regulatory frameworks, compliance duties, and commercial risks that require specialist legal guidance.
@@ -1069,7 +1069,7 @@ International trade requires careful legal planning to manage risks and unlock o
     title: 'NGOs/INGOs & Non-Profit Organizations Law',
     image: '/images/practice-areas/ngo.png',
     shortDescription:
-      'Supporting impact with sound legal governance.',
+      '',
     fullDescription:
       `Overview
 At Videha Law and Associates, our NGOs, INGOs, and Non-Profit Organizations practice offers comprehensive legal support to civil society organizations, international development partners, humanitarian agencies, charitable foundations, community-based organizations, advocacy groups, and social enterprises operating in Nepal. These organizations play a crucial role in development, service delivery, human rights protection, and social transformation. However, their operations must comply with a structured and evolving regulatory framework that balances public accountability with operational independence.
@@ -1218,7 +1218,7 @@ Beyond the initial investment phase, Videha Law and Associates remains a long-te
     title: 'E-Commerce Law',
     image: '/images/practice-areas/E-commerce.png',
     shortDescription:
-      'Enabling secure and compliant digital business.',
+      '',
     fullDescription:
     `Overview
 At Videha Law and Associates, our E-Commerce Law practice provides comprehensive legal support to online retailers, digital marketplaces, payment service providers, technology platforms, logistics companies, and traditional businesses transitioning into digital commerce. With Nepal’s rapidly expanding digital economy, e-commerce has fundamentally reshaped consumer behavior, business operations, and transactional systems. However, operating in this space requires navigating a sophisticated legal framework covering electronic transactions, consumer rights, data protection, payment systems, intellectual property, and cross-border digital trade.

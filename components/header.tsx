@@ -123,9 +123,7 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/#consultation" style={{ color: '#2E2E2E' }}>
-              Contact
-            </Link>
+  
           </nav>
 
           {/* Desktop Button */}

@@ -56,9 +56,6 @@ export default function Hero() {
 </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg">
-            <a href="#consultation">Book Consultation</a>
-          </Button>
           <Button asChild variant="outline" size="lg" className="border-white text-shadow hover:bg-white hover:text-black">
             <a href="/services">Learn More</a>
           </Button>
