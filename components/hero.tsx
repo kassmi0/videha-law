@@ -48,10 +48,10 @@ export default function Hero() {
 
         <p className="text-lg md:text-xl text-white/85 mb-8 max-w-3xl md:max-w-5xl mx-auto drop-shadow text-center">
   <span className="block md:whitespace-nowrap">
-    Premier legal services for corporate, commercial, and intellectual property matters.
+   
   </span>
   <span className="block md:whitespace-nowrap mt-2">
-    Your trusted partner in navigating complex legal challenges.
+
   </span>
 </p>
 

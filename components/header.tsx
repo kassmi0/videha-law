@@ -123,14 +123,16 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-  
+            <Link href="/#consultation" style={{ color: '#2E2E2E' }}>
+              
+            </Link>
           </nav>
 
           {/* Desktop Button */}
           <div className="hidden lg:flex">
             <Button asChild style={{ backgroundColor: '#58081F' }}>
               <a href="/#consultation" className="text-white">
-              Schedule a Meeting
+                Contact Us 
               </a>
             </Button>
           </div>
@@ -229,11 +231,7 @@ export default function Header() {
               Contact
             </Link>
 
-            <Button asChild>
-              <a href="/#consultation" onClick={() => setIsOpen(false)}>
-              Schedule a Meeting
-              </a>
-            </Button>
+
           </nav>
         )}
       </div>
