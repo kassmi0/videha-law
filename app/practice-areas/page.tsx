@@ -15,7 +15,7 @@ export default function PracticeAreasPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-              Our Practice Areas
+              Our Expertise
             </h1>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
               Deep expertise across key sectors and complex matters

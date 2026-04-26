@@ -115,7 +115,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Menu</h4>
               <ul className="space-y-2 text-sm opacity-80">
                 <li><Link href="/#about">About</Link></li>
-                <li><Link href="/#practice-areas">PracticeAreas</Link></li>
+                <li><Link href="/#our-expertise">Our Expertise</Link></li>
                 <li><Link href="/#services">Services</Link></li>
                 <li><Link href="/#insights">Insights</Link></li>
                 <li><Link href="/#consultation">Contact</Link></li>

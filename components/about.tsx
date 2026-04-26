@@ -69,7 +69,7 @@ export default function About() {
                 href="/practice-areas"
                 className="rounded-lg border border-primary/30 px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/5"
               >
-                Explore Practice Areas
+                Explore Our Expertise
               </Link>
             </div>
           </div>

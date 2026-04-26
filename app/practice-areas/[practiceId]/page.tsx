@@ -73,7 +73,7 @@ export default async function PracticeAreaDetailPage({
           {/* BREADCRUMB */}
           <nav className="mb-6 text-sm flex items-center gap-1">
             <Link href="/practice-areas" className="text-primary hover:underline">
-              Practice areas
+              Our Expertise
             </Link>
             <span className="text-foreground/40">/</span>
             <span className="text-foreground/60">{area.title}</span>
@@ -82,7 +82,7 @@ export default async function PracticeAreaDetailPage({
           {/* BADGE */}
           <div className="mb-3">
             <span className="text-xs font-semibold tracking-widest uppercase border border-primary text-primary px-3 py-1 rounded-sm">
-              Practice Area
+              Expertise
             </span>
           </div>
 
@@ -173,7 +173,7 @@ export default async function PracticeAreaDetailPage({
                 {relatedAreas.length > 0 && (
                   <div className="bg-card/70 border border-border/50 rounded-lg p-5">
                     <p className="text-xs font-semibold tracking-widest uppercase text-foreground/40 mb-4">
-                      Related Practice Areas
+                      Related Expertise
                     </p>
                     <div className="flex flex-col gap-1">
                       {relatedAreas.map((related) => (

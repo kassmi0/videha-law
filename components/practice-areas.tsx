@@ -7,13 +7,13 @@ export default function PracticeAreas() {
   const visiblePracticeAreas = practiceAreas.slice(0, 6);
 
   return (
-    <section className="py-24 bg-[#FAF8F6]">
+    <section id="our-expertise" className="py-24 bg-[#FAF8F6]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading (CENTERED) */}
         <div className="mb-20 max-w-2xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-[#58081F] mb-4">
-            Practice Areas
+          Our Expertise
           </h2>
         </div>
 

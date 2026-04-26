@@ -53,10 +53,10 @@ export default function Header() {
               About
             </Link>
 
-            {/* Practice Areas */}
+            {/* Our Expertise */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button style={{ color: '#2E2E2E' }}>Practice Areas</button>
+                <button style={{ color: '#2E2E2E' }}>Our Expertise</button>
               </DropdownMenuTrigger>
 
               <DropdownMenuContent className="bg-[#FAFAFA] text-charcoal w-72">
@@ -155,10 +155,10 @@ export default function Header() {
               About
             </Link>
 
-            {/* Practice Mobile */}
+            {/* Expertise Mobile */}
             <div>
               <button onClick={() => setShowPractice(!showPractice)}>
-                Practice Areas {showPractice ? '−' : '+'}
+                Our Expertise {showPractice ? '−' : '+'}
               </button>
               {showPractice && (
                 <div className="pl-3 mt-2 flex flex-col gap-2">
@@ -172,7 +172,7 @@ export default function Header() {
                     </Link>
                   ))}
                   <Link href="/practice-areas" onClick={() => setIsOpen(false)}>
-                    View All Practice Areas
+                    View All Expertise
                   </Link>
                 </div>
               )}
