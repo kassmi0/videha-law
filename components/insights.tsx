@@ -66,7 +66,7 @@ export default function Insights() {
             href="/insights"
             className="inline-flex items-center gap-1.5 text-sm text-white/70 underline underline-offset-4 transition hover:text-white"
           >
-            View all insights →
+            View More →
           </Link>
         </div>
 

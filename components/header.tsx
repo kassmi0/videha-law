@@ -70,7 +70,7 @@ export default function Header() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/practice-areas">
-                    View All Practice Areas
+                   
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -97,7 +97,7 @@ export default function Header() {
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/services">View All Services</Link>
+                  <Link href="/services"></Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -118,7 +118,7 @@ export default function Header() {
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/insights">View All Insights</Link>
+                  <Link href="/insights"></Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -228,7 +228,7 @@ export default function Header() {
             </div>
 
             <Link href="/#consultation" onClick={() => setIsOpen(false)}>
-              Contact
+              Contact Us
             </Link>
 
 

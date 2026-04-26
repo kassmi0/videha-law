@@ -75,7 +75,7 @@ export default function Consultation() {
         <div className="grid overflow-hidden rounded-3xl border border-primary/15 bg-card shadow-2xl shadow-primary/10 lg:grid-cols-5">
           <div className="lg:col-span-2 bg-primary text-primary-foreground p-8 sm:p-10">
             <p className="inline-flex rounded-full border border-primary-foreground/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
-              Book Consultation
+              Contact Us
             </p>
             <h2 className="mt-5 text-3xl font-bold leading-tight">
               Get legal guidance from our experts.
@@ -195,7 +195,7 @@ export default function Consultation() {
               </div>
 
               <Button type="submit" size="lg" className="w-full sm:w-auto px-8" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
+                {isSubmitting ? 'Sending...' : 'contact Us'}
               </Button>
 
               {submitStatus.type ? (

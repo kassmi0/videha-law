@@ -134,7 +134,7 @@ export default function PracticeAreas() {
             href="/practice-areas"
             className="text-[#58081F] font-semibold underline underline-offset-4"
           >
-            View All Practice Areas →
+            View More →
           </Link>
         </div>
 
