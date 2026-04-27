@@ -18,7 +18,7 @@ export default function PracticeAreasPage() {
               Our Expertise
             </h1>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-              Deep expertise across key sectors and complex matters
+             
             </p>
           </div>
 

@@ -31,13 +31,10 @@ export default function About() {
             </h2>
 
             <p className="mt-5 text-base leading-relaxed text-foreground/75">
-              Videha Law & Associates is a trusted corporate and commercial law firm in Nepal,
-              known for combining legal precision with practical business understanding. We help
-              organizations navigate risk, protect interests, and move forward with confidence.
+            Videha Law and Associates is a Kathmandu-based law firm dedicated to delivering sharp, practical legal solutions for businesses operating in Nepal. With expertise spanning corporate law, commercial transactions, regulatory compliance, and dispute resolution, our team brings clarity to complex legal challenges. We measure our success not by the complexity of the work, but by the confidence our clients gain from working with us.
             </p>
             <p className="mt-4 text-base leading-relaxed text-foreground/75">
-              From transactions and compliance to dispute resolution, our approach is proactive,
-              transparent, and tailored to each client&apos;s goals.
+              
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
